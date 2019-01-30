@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\weial\.Rider2018.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\weial\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\weial\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_MemoryWallet.576306900.00" t="ExcludeRecursive" />
+    <e p="C:\Users\weial\git\awei\memory-wallet\netcore" t="IncludeFlat">
+      <e p="MemoryWallet.Service" t="IncludeRecursive">
+        <e p="Actor" t="Include">
+          <e p="PlayerActor.cs" t="Include" />
+          <e p="PlayerManagerActor.cs" t="Include" />
+          <e p="SportsBookActor.cs" t="Include" />
+        </e>
+        <e p="akka.conf" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DI.cs" t="Include" />
+        <e p="MemoryWallet.cs" t="Include" />
+        <e p="MemoryWallet.Service.csproj" t="IncludeRecursive" />
+        <e p="Model" t="Include">
+          <e p="PlayerProfile.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="MemoryWallet.Service.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="MemoryWallet.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

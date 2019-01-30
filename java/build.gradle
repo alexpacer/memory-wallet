@@ -26,3 +26,7 @@ dependencies {
 dependencies {
     compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 }
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-persistence_2.12', version: '2.5.20'
+}

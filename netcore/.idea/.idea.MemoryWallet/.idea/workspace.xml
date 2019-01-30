@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="81c768e2-d443-40ae-8167-27c43b0dd782" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerManagerActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/DI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/Model/PlayerProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/akka.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Service/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../java/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/src/main/java/awei/memory/wallet/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/src/main/java/awei/memory/wallet/Main.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="54" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="54" />
+              <folding>
+                <marker date="1548810235573" expanded="true" signature="6:74" ph="..." />
+                <marker date="1548810235573" expanded="true" signature="141:934" ph="{...}" />
+                <marker date="1548810235573" expanded="true" signature="173:932" ph="{...}" />
+                <marker date="1548810235573" expanded="true" signature="284:621" ph="{...}" />
+                <marker date="1548810235573" expanded="true" signature="649:926" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+              <folding>
+                <marker date="1548817857343" expanded="true" signature="6:78" ph="..." />
+                <marker date="1548817857343" expanded="true" signature="117:2052" ph="{...}" />
+                <marker date="1548817857343" expanded="true" signature="167:2050" ph="{...}" />
+                <marker date="1548817857343" expanded="true" signature="206:1914" ph="{...}" />
+                <marker date="1548817857343" expanded="true" signature="312:837" ph="/* playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = &quot;Initial balance&quot;}, Self); ... */" />
+                <marker date="1548817857343" expanded="true" signature="1246:1904" ph="/* playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = &quot;Initial balance&quot;}, Self); ... */" />
+                <marker date="1548817857343" expanded="true" signature="1951:2044" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerManagerActor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <folding>
+                <marker date="1548818152231" expanded="true" signature="6:69" ph="..." />
+                <marker date="1548818152231" expanded="true" signature="108:1588" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="161:1586" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="288:857" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="339:519" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="564:783" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="902:995" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="1033:1108" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="1145:1266" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="1304:1370" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="1443:1476" ph="{...}" />
+                <marker date="1548818152231" expanded="true" signature="1547:1580" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerActor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+              <folding>
+                <marker date="1548816734168" expanded="true" signature="6:93" ph="..." />
+                <marker date="1548816734168" expanded="true" signature="132:2059" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="188:2057" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="361:1030" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="447:516" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="558:623" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="932:1018" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1089:1225" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1135:1215" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1293:1451" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1358:1441" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1509:1617" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1725:1842" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="1878:1995" ph="{...}" />
+                <marker date="1548816734168" expanded="true" signature="2031:2051" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/DI.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding>
+                <marker date="1548810717784" expanded="true" signature="6:45" ph="..." />
+                <marker date="1548810717784" expanded="true" signature="119:706" ph="{...}" />
+                <marker date="1548810717784" expanded="true" signature="148:704" ph="{...}" />
+                <marker date="1548810717784" expanded="true" signature="308:696" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/Model/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/DI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerManagerActor.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MemoryWallet.Console/Program.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/appsettings.json" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actors/SystemActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actors/MemoryWallet.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Program.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/DI.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actors/SportsBookActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actors/PlayerActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/akka.conf" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Model/PlayerProfile.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerManagerActor.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MemoryWallet" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MemoryWallet" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MemoryWallet.Service" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="MemoryWallet" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MemoryWallet.Service" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Actor" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="MemoryWallet" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/MemoryWallet.Service/bin/Debug/netcoreapp2.1/MemoryWallet.Service.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MemoryWallet.Service" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.Service.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.1" />
+      <browser url="http://localhost:5000" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81c768e2-d443-40ae-8167-27c43b0dd782" name="Default Changelist" comment="" />
+      <created>1548809036260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1548809036260</updated>
+      <workItem from="1548809037700" duration="212000" />
+      <workItem from="1548809270539" duration="7171000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7383000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15458423" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.2751896" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.16468039" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Console/Program.cs" />
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.Service.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="46" lean-forward="true" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <marker date="1548810284102" expanded="true" signature="6:29" ph="..." />
+            <marker date="1548810284102" expanded="true" signature="61:779" ph="{...}" />
+            <marker date="1548810284102" expanded="true" signature="81:777" ph="{...}" />
+            <marker date="1548810284102" expanded="true" signature="127:771" ph="{...}" />
+            <marker date="1548810284102" expanded="true" signature="230:759" ph="{...}" />
+            <marker date="1548810284102" expanded="true" signature="537:743" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/DI.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <marker date="1548810717784" expanded="true" signature="6:45" ph="..." />
+            <marker date="1548810717784" expanded="true" signature="119:706" ph="{...}" />
+            <marker date="1548810717784" expanded="true" signature="148:704" ph="{...}" />
+            <marker date="1548810717784" expanded="true" signature="308:696" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Model/PlayerProfile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <marker date="1548816756208" expanded="true" signature="36:275" ph="{...}" />
+            <marker date="1548816756208" expanded="true" signature="69:273" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/akka.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="54" />
+          <folding>
+            <marker date="1548810235573" expanded="true" signature="6:74" ph="..." />
+            <marker date="1548810235573" expanded="true" signature="141:934" ph="{...}" />
+            <marker date="1548810235573" expanded="true" signature="173:932" ph="{...}" />
+            <marker date="1548810235573" expanded="true" signature="284:621" ph="{...}" />
+            <marker date="1548810235573" expanded="true" signature="649:926" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerActor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="69" column="27" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="27" />
+          <folding>
+            <marker date="1548816734168" expanded="true" signature="6:93" ph="..." />
+            <marker date="1548816734168" expanded="true" signature="132:2059" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="188:2057" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="361:1030" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="447:516" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="558:623" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="932:1018" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1089:1225" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1135:1215" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1293:1451" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1358:1441" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1509:1617" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1725:1842" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="1878:1995" ph="{...}" />
+            <marker date="1548816734168" expanded="true" signature="2031:2051" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding>
+            <marker date="1548817857343" expanded="true" signature="6:78" ph="..." />
+            <marker date="1548817857343" expanded="true" signature="117:2052" ph="{...}" />
+            <marker date="1548817857343" expanded="true" signature="167:2050" ph="{...}" />
+            <marker date="1548817857343" expanded="true" signature="206:1914" ph="{...}" />
+            <marker date="1548817857343" expanded="true" signature="312:837" ph="/* playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = &quot;Initial balance&quot;}, Self); ... */" />
+            <marker date="1548817857343" expanded="true" signature="1246:1904" ph="/* playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = &quot;Initial balance&quot;}, Self); ... */" />
+            <marker date="1548817857343" expanded="true" signature="1951:2044" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MemoryWallet.Service/Actor/PlayerManagerActor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding>
+            <marker date="1548818152231" expanded="true" signature="6:69" ph="..." />
+            <marker date="1548818152231" expanded="true" signature="108:1588" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="161:1586" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="288:857" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="339:519" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="564:783" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="902:995" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="1033:1108" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="1145:1266" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="1304:1370" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="1443:1476" ph="{...}" />
+            <marker date="1548818152231" expanded="true" signature="1547:1580" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
