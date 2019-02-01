@@ -22,7 +22,7 @@
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp2.2" t="Include">
               <e p="MemoryWallet.Service.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -30,6 +30,40 @@
         <e p="Program.cs" t="Include" />
       </e>
       <e p="MemoryWallet.sln" t="IncludeFlat" />
+      <e p="MemoryWallet.Web" t="IncludeRecursive">
+        <e p="Actors" t="Include">
+          <e p="SportsBookManagerActor.cs" t="Include" />
+        </e>
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="MemoryWallet.Web.csproj" t="IncludeRecursive" />
+        <e p="nlog.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="MemoryWallet.Web.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="ViewModel" t="Include">
+          <e p="LoginViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+          </e>
+        </e>
+      </e>
       <e p="packages" t="ExcludeRecursive" />
     </e>
   </component>

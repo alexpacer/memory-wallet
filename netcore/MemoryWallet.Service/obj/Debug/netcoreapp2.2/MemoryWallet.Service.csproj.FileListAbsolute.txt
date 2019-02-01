@@ -1,0 +1,13 @@
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\akka.conf
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\MemoryWallet.Service.deps.json
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\MemoryWallet.Service.runtimeconfig.json
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\MemoryWallet.Service.runtimeconfig.dev.json
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\MemoryWallet.Service.dll
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\bin\Debug\netcoreapp2.2\MemoryWallet.Service.pdb
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.csprojAssemblyReference.cache
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.csproj.CoreCompileInputs.cache
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.AssemblyInfoInputs.cache
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.AssemblyInfo.cs
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.dll
+C:\Users\weial\git\awei\memory-wallet\netcore\MemoryWallet.Service\obj\Debug\netcoreapp2.2\MemoryWallet.Service.pdb
