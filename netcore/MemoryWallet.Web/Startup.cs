@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 namespace MemoryWallet.Web
 {
     public delegate IActorRef SportsBookManagerSystemActorProvider();
+
+    public delegate ActorSelection SportsBookManagerRemoteActorPRovider();
     
     public class Startup
     {
@@ -47,6 +49,12 @@ akka {
 
                 var b = actorSystem.ActorOf(SportsBookManagerActor.Props(_actorLogger));
                 return () => b;
+            });
+
+            services.AddSingleton<SportsBookManagerRemoteActorPRovider>(p =>
+            {
+                var actorSelection = p.GetService<ActorSystem>();
+                return () => actorSelection.ActorSelection("akka.tcp://MemoryWallet@localhost:8080/user/Sportsbook");
             });
 
             services.AddMvc();

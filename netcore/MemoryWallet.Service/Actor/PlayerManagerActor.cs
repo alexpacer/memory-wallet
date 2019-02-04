@@ -22,8 +22,12 @@ namespace MemoryWallet.Service.Actors
                 player.Tell(PoisonPill.Instance);
                 _log.Info($"player {l.PlayerId} Logged out");
             });
-            
-            // Console.WriteLine(playerManager);
+
+
+            Receive<string>(l =>
+            {
+                _log.Info($"Received from remote actor {l}");
+            });
         }
         
         public static Props Props()

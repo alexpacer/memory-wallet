@@ -1,5 +1,6 @@
 using System;
 using Akka.Actor;
+using Akka.Event;
 using IdGen;
 using MemoryWallet.Service.Model;
 
@@ -7,8 +8,16 @@ namespace MemoryWallet.Service.Actors
 {
     public class SportsBookActor : ReceiveActor
     {
+        private readonly ILoggingAdapter _log = Logging.GetLogger(Context);
+
         public SportsBookActor()
         {
+
+            Receive<string>(r =>
+            {
+                _log.Info($"SportsBookActor received: {r}, {Sender.Path.Address}");
+            });
+            
             var playerManager = Context.ActorOf(PlayerManagerActor.Props(), "PlayerManager");
 
 //            playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = "Initial balance"}, Self);

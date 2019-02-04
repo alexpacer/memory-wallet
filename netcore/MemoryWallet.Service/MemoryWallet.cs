@@ -19,6 +19,8 @@ namespace MemoryWallet.Service
             _system = ActorSystem.Create("MemoryWallet", config);
 
             _sportsbook = _system.ActorOf(SportsBookActor.Props(), "Sportsbook");
+            
+            
         }
 
         public void Stop()

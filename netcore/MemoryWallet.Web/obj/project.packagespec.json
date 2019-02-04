@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\weial\\git\\awei\\memory-wallet\\netcore\\MemoryWallet.Web\\MemoryWallet.Web.csproj",
+    "projectUniqueName": "C:\\Users\\weial\\git\\memory-wallet\\netcore\\MemoryWallet.Web\\MemoryWallet.Web.csproj",
     "projectName": "MemoryWallet.Web",
-    "projectPath": "C:\\Users\\weial\\git\\awei\\memory-wallet\\netcore\\MemoryWallet.Web\\MemoryWallet.Web.csproj",
-    "outputPath": "C:\\Users\\weial\\git\\awei\\memory-wallet\\netcore\\MemoryWallet.Web\\obj\\",
+    "projectPath": "C:\\Users\\weial\\git\\memory-wallet\\netcore\\MemoryWallet.Web\\MemoryWallet.Web.csproj",
+    "outputPath": "C:\\Users\\weial\\git\\memory-wallet\\netcore\\MemoryWallet.Web\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
