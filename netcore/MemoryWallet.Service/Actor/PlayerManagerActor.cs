@@ -1,19 +1,28 @@
 using Akka.Actor;
 using Akka.Event;
-using MemoryWallet.Service.Model;
+using Autofac;
+using MemoryWallet.Lib;
+using MemoryWallet.Lib.Model;
+using MemoryWallet.Lib.Repository;
+using MemoryWallet.Service.Actors;
 
-namespace MemoryWallet.Service.Actors
+namespace MemoryWallet.Service.Actor
 {
     public class PlayerManagerActor : ReceiveActor
     {
         private readonly ILoggingAdapter _log = Logging.GetLogger(Context);
         
-        public PlayerManagerActor()
+        public PlayerManagerActor(IPlayerRepository playerRepository)
         {
-            Receive<PlayerLoginEvt>(l =>
+            ReceiveAsync<PlayerLoginEvt>(async l =>
             {
-                Context.ActorOf(PlayerActor.Props(l.Profile), $"player-{l.PlayerId}");
-                _log.Info($"player {l.Profile.Name} Logged in");
+                var profile = await playerRepository.GetPlayer(l.Email);
+
+                if (profile != null)
+                {
+                    Context.ActorOf(PlayerActor.Props(profile), $"player-{profile.Id}");
+                    _log.Info($"player {profile.Id}::{profile.Name} Logged in, having balance of {profile.Balance}");                    
+                }
             });
 
             Receive<PlayerLogoutEvt>(l =>
@@ -23,7 +32,7 @@ namespace MemoryWallet.Service.Actors
                 _log.Info($"player {l.PlayerId} Logged out");
             });
 
-
+            // Testing only
             Receive<string>(l =>
             {
                 _log.Info($"Received from remote actor {l}");
@@ -32,17 +41,14 @@ namespace MemoryWallet.Service.Actors
         
         public static Props Props()
         {
-            return Akka.Actor.Props.Create(() => new SportsBookActor());
+            return Akka.Actor.Props.Create(() => 
+                new PlayerManagerActor(
+                    DI.Container.Resolve<IPlayerRepository>()
+                    ));
         }
 
         public class CreatePlayerEvt
         {
-            public PlayerProfile Profile { get; set; }
-        }
-
-        public class PlayerLoginEvt
-        {
-            public int PlayerId { get; set; }
             public PlayerProfile Profile { get; set; }
         }
 
@@ -52,11 +58,6 @@ namespace MemoryWallet.Service.Actors
         }
         
         private void HandleCreatePlayerEvt(CreatePlayerEvt evt)
-        {
-            
-        }
-        
-        private void HandlePlayerLoginEvt(PlayerLoginEvt evt)
         {
             
         }

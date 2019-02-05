@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Akka.Actor;
 using Akka.Configuration;
+using MemoryWallet.Service.Actor;
 using MemoryWallet.Service.Actors;
 
 namespace MemoryWallet.Service
@@ -19,8 +20,6 @@ namespace MemoryWallet.Service
             _system = ActorSystem.Create("MemoryWallet", config);
 
             _sportsbook = _system.ActorOf(SportsBookActor.Props(), "Sportsbook");
-            
-            
         }
 
         public void Stop()

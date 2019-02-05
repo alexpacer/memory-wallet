@@ -31,4 +31,12 @@
       </None>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\MemoryWallet.Lib\MemoryWallet.Lib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Model" />
+    </ItemGroup>
+
 </Project>

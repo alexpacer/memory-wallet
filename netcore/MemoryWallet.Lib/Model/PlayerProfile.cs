@@ -1,4 +1,4 @@
-namespace MemoryWallet.Service.Model
+namespace MemoryWallet.Lib.Model
 {
     public class PlayerProfile
     {

@@ -54,7 +54,7 @@ akka {
             services.AddSingleton<SportsBookManagerRemoteActorPRovider>(p =>
             {
                 var actorSelection = p.GetService<ActorSystem>();
-                return () => actorSelection.ActorSelection("akka.tcp://MemoryWallet@localhost:8080/user/Sportsbook");
+                return () => actorSelection.ActorSelection("akka.tcp://MemoryWallet@localhost:8080/user/Sportsbook/PlayerManager");
             });
 
             services.AddMvc();

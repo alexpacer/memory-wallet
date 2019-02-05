@@ -1,4 +1,5 @@
 using Akka.Actor;
+using MemoryWallet.Lib;
 using MemoryWallet.Web.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,7 +12,7 @@ namespace MemoryWallet.Web.Controllers
         private readonly ActorSelection _remoteManager;
         private readonly IActorRef _spkManager;
 
-        public HomeController(SportsBookManagerSystemActorProvider sbkManager, 
+        public HomeController(SportsBookManagerSystemActorProvider sbkManager,
             ILogger<HomeController> logger,
             SportsBookManagerRemoteActorPRovider remoteManager)
         {
@@ -24,17 +25,22 @@ namespace MemoryWallet.Web.Controllers
         {
             return View();
         }
-        
+
         public IActionResult Login(LoginViewModel login)
         {
             // to do : return something
             ViewBag.UserName = login.Email;
-            
-            
+
+
             _spkManager.Tell("login");
 
-            _remoteManager.Tell("login-"+login.Email );
-            
+            var playerLoginEvt = new PlayerLoginEvt
+            {
+                Email = login.Email
+            };
+
+            _remoteManager.Tell(playerLoginEvt);
+
             _logger.LogInformation($"User logging in: {login.Email} {_remoteManager.PathString}");
             return View();
         }

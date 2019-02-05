@@ -1,7 +1,7 @@
 using Akka.Actor;
 using Akka.Event;
 using Akka.Persistence;
-using MemoryWallet.Service.Model;
+using MemoryWallet.Lib.Model;
 
 namespace MemoryWallet.Service.Actors
 {

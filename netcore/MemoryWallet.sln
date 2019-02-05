@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Service", "Mem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Web", "MemoryWallet.Web\MemoryWallet.Web.csproj", "{AC585F20-3595-4110-BFE1-891D020B0759}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Lib", "MemoryWallet.Lib\MemoryWallet.Lib.csproj", "{3C04DDAF-82A8-4690-A958-092C6AB2A9A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AC585F20-3595-4110-BFE1-891D020B0759}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC585F20-3595-4110-BFE1-891D020B0759}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC585F20-3595-4110-BFE1-891D020B0759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C04DDAF-82A8-4690-A958-092C6AB2A9A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C04DDAF-82A8-4690-A958-092C6AB2A9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C04DDAF-82A8-4690-A958-092C6AB2A9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C04DDAF-82A8-4690-A958-092C6AB2A9A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

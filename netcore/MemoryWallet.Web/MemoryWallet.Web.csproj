@@ -18,5 +18,9 @@
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MemoryWallet.Lib\MemoryWallet.Lib.csproj" />
+    </ItemGroup>
     
 </Project>

@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Autofac;
+using MemoryWallet.Lib.Repository;
 using Microsoft.Extensions.Configuration;
 
 namespace MemoryWallet.Service
@@ -19,6 +20,8 @@ namespace MemoryWallet.Service
                 .Build();
 
             builder.Register<IConfiguration>(context => config);
+
+            builder.RegisterType<PlayerRepository>().As<IPlayerRepository>().AsSelf();
             
             return builder.Build();
         });

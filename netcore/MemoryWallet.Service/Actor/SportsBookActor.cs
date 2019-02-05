@@ -1,10 +1,11 @@
-using System;
 using Akka.Actor;
 using Akka.Event;
 using IdGen;
-using MemoryWallet.Service.Model;
+using MemoryWallet.Lib;
+using MemoryWallet.Lib.Model;
+using MemoryWallet.Service.Actors;
 
-namespace MemoryWallet.Service.Actors
+namespace MemoryWallet.Service.Actor
 {
     public class SportsBookActor : ReceiveActor
     {
@@ -20,6 +21,8 @@ namespace MemoryWallet.Service.Actors
             
             var playerManager = Context.ActorOf(PlayerManagerActor.Props(), "PlayerManager");
 
+            _log.Info($"playerManager: {playerManager.Path.ToStringWithAddress()}");
+            
 //            playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100, Description = "Initial balance"}, Self);
 //            playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 2000, Description = "Found 2 notes on floor."}, Self);
 //            playerAlex.Tell(new PlayerActor.DepositEvt {Amt = 100000, Description = "If I am a rich man, Lalalalalalalalalalalalala~"}, Self);
@@ -27,10 +30,10 @@ namespace MemoryWallet.Service.Actors
 //            playerManager.Ask<decimal>(new PlayerActor.GetBalanceEvt())
 //                .ContinueWith(c => Console.WriteLine("-----" + c.Result));
 
-            var idGenerator = new IdGenerator(0);
-           
-            var alexProfile = new PlayerProfile {Name = "Alex", Id = idGenerator.CreateId()};
-            playerManager.Tell(new PlayerManagerActor.PlayerLoginEvt {Profile = alexProfile});
+//            var idGenerator = new IdGenerator(0);
+//           
+//            var alexProfile = new PlayerProfile {Name = "Alex", Id = idGenerator.CreateId()};
+//            playerManager.Tell(new PlayerLoginEvt {Profile = alexProfile});
 
 
 //            var playerAlex = Context.ActorSelection($"/user/MemoryWallet/Sportsbook/PlayerManager/player-{alexProfile.Id}");
