@@ -43,6 +43,7 @@ akka {
 ");
             services.AddSingleton(_ => ActorSystem.Create("SportsbookStore", config));
 
+            // Local actor
             services.AddSingleton<SportsBookManagerSystemActorProvider>(p =>
             {
                 var actorSystem = p.GetService<ActorSystem>();
@@ -50,7 +51,8 @@ akka {
                 var b = actorSystem.ActorOf(SportsBookManagerActor.Props(_actorLogger));
                 return () => b;
             });
-
+            
+            // Remote Actor
             services.AddSingleton<SportsBookManagerRemoteActorPRovider>(p =>
             {
                 var actorSelection = p.GetService<ActorSystem>();
