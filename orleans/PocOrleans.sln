@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PocOrleans.Grain", "PocOrle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PocOrleans.GrainInterface", "PocOrleans.GrainInterface\PocOrleans.GrainInterface.csproj", "{346C53C4-C5B8-4935-B800-C78E3CB7924A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orleans", "Orleans", "{0923009A-0CD1-40E6-A8BF-5CFA00C0B9D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{08991787-FA72-4487-8660-B7B35FB3CA9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,5 +43,11 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52A1376E-68A2-4689-9AD4-0C73ED860348}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDB768C4-0E00-4344-83AC-3E32D6CECB8B} = {0923009A-0CD1-40E6-A8BF-5CFA00C0B9D2}
+		{93351819-77E3-4692-88AC-3912E4AF3A61} = {0923009A-0CD1-40E6-A8BF-5CFA00C0B9D2}
+		{346C53C4-C5B8-4935-B800-C78E3CB7924A} = {0923009A-0CD1-40E6-A8BF-5CFA00C0B9D2}
+		{A4FD6BA8-D271-430D-84B2-8E10A92BEC14} = {0923009A-0CD1-40E6-A8BF-5CFA00C0B9D2}
 	EndGlobalSection
 EndGlobal

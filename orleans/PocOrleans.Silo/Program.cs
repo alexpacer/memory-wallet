@@ -18,10 +18,13 @@ namespace PocOrleans.Silo
                 .ConfigureApplicationParts(c =>
                 {
                     c.AddApplicationPart(typeof(ValueGrain).Assembly).WithReferences();
-                    c.AddApplicationPart(typeof(PlayerGrain).Assembly).WithCodeGeneration();
+                    c.AddApplicationPart(typeof(PlayerGrain).Assembly).WithReferences();
                 })
                 .ConfigureLogging(logging => logging.AddConsole())
-                .UseDashboard();
+                .UseDashboard(d =>
+                {
+                    d.Port = 3000;
+                });    
 
             using (var host = siloBuilder.Build())
             {
