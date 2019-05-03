@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Orleans;
 
-namespace PocOrleans.GrainInterface
+namespace MemoryWallet.GrainInterface
 {
     public interface IPlayerGrain : IGrainWithIntegerKey
     {

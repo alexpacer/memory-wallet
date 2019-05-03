@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MemoryWallet.GrainInterface;
 using Orleans;
 using Orleans.Providers;
-using PocOrleans.GrainInterface;
 
-namespace PocOrleans.Grain
+namespace MemoryWallet.Grain
 {
     [StorageProvider(ProviderName = "players")]
     public class PlayerGrain : Grain<PlayerState>, IPlayerGrain

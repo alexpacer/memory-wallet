@@ -1,4 +1,4 @@
-namespace PocOrleans
+namespace MemoryWallet.Web
 {
     public class Declearation
     {

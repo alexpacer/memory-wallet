@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{3DC3D620-241B-4416-95BE-3663B331080A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orleans", "Orleans", "{EEF92EA0-9F5F-44A1-A04E-93B960DBE2BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Grain", "MemoryWallet.Grain\MemoryWallet.Grain.csproj", "{0E4058CD-6818-4423-BFD8-0C100E211E6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.GrainInterface", "MemoryWallet.GrainInterface\MemoryWallet.GrainInterface.csproj", "{C525D554-4753-4F1E-8164-3FB781A4E243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Silo", "MemoryWallet.Silo\MemoryWallet.Silo.csproj", "{1A937329-1FB0-416D-A2E1-CE26D29700B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWallet.Web", "MemoryWallet.Web\MemoryWallet.Web.csproj", "{63AC2624-869F-478B-801C-37D4BE837FEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E4058CD-6818-4423-BFD8-0C100E211E6E} = {EEF92EA0-9F5F-44A1-A04E-93B960DBE2BB}
+		{C525D554-4753-4F1E-8164-3FB781A4E243} = {EEF92EA0-9F5F-44A1-A04E-93B960DBE2BB}
+		{1A937329-1FB0-416D-A2E1-CE26D29700B7} = {EEF92EA0-9F5F-44A1-A04E-93B960DBE2BB}
+		{63AC2624-869F-478B-801C-37D4BE837FEA} = {EEF92EA0-9F5F-44A1-A04E-93B960DBE2BB}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E4058CD-6818-4423-BFD8-0C100E211E6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E4058CD-6818-4423-BFD8-0C100E211E6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E4058CD-6818-4423-BFD8-0C100E211E6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E4058CD-6818-4423-BFD8-0C100E211E6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C525D554-4753-4F1E-8164-3FB781A4E243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C525D554-4753-4F1E-8164-3FB781A4E243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C525D554-4753-4F1E-8164-3FB781A4E243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C525D554-4753-4F1E-8164-3FB781A4E243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A937329-1FB0-416D-A2E1-CE26D29700B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A937329-1FB0-416D-A2E1-CE26D29700B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A937329-1FB0-416D-A2E1-CE26D29700B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A937329-1FB0-416D-A2E1-CE26D29700B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63AC2624-869F-478B-801C-37D4BE837FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63AC2624-869F-478B-801C-37D4BE837FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63AC2624-869F-478B-801C-37D4BE837FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63AC2624-869F-478B-801C-37D4BE837FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
