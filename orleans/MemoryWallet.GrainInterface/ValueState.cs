@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PocOrleans.GrainInterface
+namespace MemoryWallet.GrainInterface
 {
     [Serializable]
     public class ValueState

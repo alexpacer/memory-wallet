@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using PocOrleans.GrainInterface;
+using MemoryWallet.GrainInterface;
 using Orleans;
 using Orleans.Providers;
 
-namespace PocOrleans.Grain
+namespace MemoryWallet.Grain
 {
     [StorageProvider(ProviderName = "store1")]
     public class ValueGrain : Grain<ValueState>, IValueGrain

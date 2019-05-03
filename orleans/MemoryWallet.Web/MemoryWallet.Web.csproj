@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\PocOrleans.GrainInterface\PocOrleans.GrainInterface.csproj" />
-      <ProjectReference Include="..\PocOrleans.Grain\PocOrleans.Grain.csproj" />
+      <ProjectReference Include="..\MemoryWallet.GrainInterface\MemoryWallet.GrainInterface.csproj" />
+      <ProjectReference Include="..\MemoryWallet.Grain\MemoryWallet.Grain.csproj" />
     </ItemGroup>
 
 </Project>

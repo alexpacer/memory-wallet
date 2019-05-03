@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
+using MemoryWallet.GrainInterface;
 using Microsoft.AspNetCore.Mvc;
 using Orleans;
-using PocOrleans.GrainInterface;
 
-namespace PocOrleans.Controllers
+namespace MemoryWallet.Web.Controllers
 {
     [Route("api/[controller]")]
     public class ValueController : Controller

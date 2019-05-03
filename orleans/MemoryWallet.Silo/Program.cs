@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Orleans.Hosting;
-using Orleans;
+using MemoryWallet.Grain;
 using Microsoft.Extensions.Logging;
-using PocOrleans.Grain;
+using Orleans;
+using Orleans.Hosting;
 
-namespace PocOrleans.Silo
+namespace MemoryWallet.Silo
 {
     public class Program
     {
