@@ -1,5 +1,6 @@
 ﻿using System;
 using MemoryWallet.GrainInterface;
+using MemoryWallet.Web.Startups;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +26,8 @@ namespace MemoryWallet.Web
         {
             services.AddMvc();
             services.AddSingleton<IClusterClient>(CreateClusterClient);
+
+            services.RegisterSqlContext(Configuration);
         }
 
         private IClusterClient CreateClusterClient(IServiceProvider serviceProvider)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MemoryWallet.GrainInterface;
+using MemoryWallet.Persistence;
 using Orleans;
 using Orleans.Providers;
 
@@ -12,14 +13,18 @@ namespace MemoryWallet.Grain
     {
         private ICollection<IMatchGrain> _matches;
 
+        protected PlayerGrain(MemoryWalletDbContext db)
+        {
+        }
+
         public override Task OnActivateAsync()
         {
             var primaryKey = this.GetPrimaryKeyLong();
             if (string.IsNullOrEmpty(State.UserName))
             {
                 // initialize player from some persistent storage other then Grain Silo
-                // var user = _userRepo.GetUser(primaryKey);
-
+                // var user = _userRepo.GetUser(primaryKey)
+                
                 this.State.UserName = "alex.wei";
                 this.State.Balance = 0;
                 this.State.Email = "alex.wei@google.com";

@@ -13,7 +13,14 @@ namespace MemoryWallet.Silo
         {
             var siloBuilder = new SiloHostBuilder()
                 .AddMemoryGrainStorage("store1")
-                .AddMemoryGrainStorage("players")
+                .AddAdoNetGrainStorage("players", opt =>
+                {
+                    opt.Invariant = "System.Data.SqlClient";
+                    opt.ConnectionString =
+                        "Data Source=localhost;initial catalog=MemoryWallet;integrated security=false;User ID=sa;Password=@bc123456;";
+//                        "Data Source=pulsars03\\TEST2016;initial catalog=MemoryWallet;integrated security=false;User ID=sa;Password=@bc123456;"
+                })
+//                .AddMemoryGrainStorage("players")
                 .UseLocalhostClustering(serviceId: "orleans-poc-cluster")
                 .ConfigureApplicationParts(c =>
                 {

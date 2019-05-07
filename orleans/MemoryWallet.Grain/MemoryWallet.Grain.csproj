@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MemoryWallet.GrainInterface\MemoryWallet.GrainInterface.csproj" />
+    <ProjectReference Include="..\MemoryWallet.Persistence\MemoryWallet.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
