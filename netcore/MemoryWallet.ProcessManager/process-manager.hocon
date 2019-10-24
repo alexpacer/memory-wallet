@@ -1,0 +1,100 @@
+akka {
+  stdout-loglevel = DEBUG
+  loglevel = DEBUG
+  loggers = ["Akka.Logger.Serilog.SerilogLogger, Akka.Logger.Serilog"]
+
+  actor {
+    provider = cluster
+    deployment {
+      
+      # This defines local 
+      /player-manager {
+        router = consistent-hashing-pool
+        nr-of-instances = 5
+      }
+
+      /player-managers {
+        router = consistent-hashing-group
+        routees.paths = ["/user/player-manager"]
+        cluster {
+          enabled = on
+          allow-local-routees = on
+          max-nr-of-instances-per-node = 5
+          user-role = "player-manager"
+        }
+      }
+
+      /fixture-finders {
+        router = round-robin-pool
+        nr-of-instances = 5
+      }
+      
+      /crawlers {
+        router = consistent-hashing-group
+        routees.paths = ["/user/crawlers"]
+        cluster {
+          enabled = on
+          allow-local-routees = off
+          max-nr-of-instances-per-node = 10 # Will deploy 3 routees in cluster
+          use-role = crawler
+        }
+      }
+    }
+
+
+    debug {
+//      receive = on
+//      autoreceive = on
+//      lifecycle = on
+//      event-stream = on
+//      unhandled = on
+    }
+    
+    
+  }
+
+  persistence {
+    journal {
+      plugin = "akka.persistence.journal.eventstore"
+      eventstore {
+        class = "Akka.Persistence.EventStore.Journal.EventStoreJournal, Akka.Persistence.EventStore"
+        connection-string = "ConnectTo=tcp://admin:changeit@localhost:1113;HeartBeatTimeout=500"
+        connection-name = "Akka-MemoryWallet"
+      }
+    }
+    snapshot-store {
+      eventstore {
+        class = "Akka.Persistence.EventStore.Snapshot.EventStoreSnapshotStore, Akka.Persistence.EventStore"
+        connection-string = "ConnectTo=tcp://admin:changeit@localhost:1113;HeartBeatTimeout=500"
+        connection-name = "Akka-MemoryWallet-Snapshot"
+        plugin-dispatcher = "akka.actor.default-dispatcher"
+
+        # how many snapshots to pull at a time
+        read-batch-size = 500
+        # which adapter to use
+        adapter = "default"
+        # prefix used to create stream name along side with PersistenceId for snapshot
+        prefix = "snapshot@"
+      }
+    }
+
+    query.journal.plugin = "akka.persistence.query.journal.eventstore"
+  }
+
+  remote {
+    dot-netty.tcp {
+      hostname = localhost
+      port = 0
+    }
+  }
+
+  cluster {
+    seed-node-timeout = 20s
+    seed-nodes = [
+      "akka.tcp://sbk@localhost:2551"
+    ]
+    roles = ["process-manager", "player-manager"]
+  }
+
+
+}

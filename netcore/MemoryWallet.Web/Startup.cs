@@ -1,88 +1,133 @@
-﻿using Akka.Actor;
+using Akka.Actor;
+using Akka.Cluster.Tools.Singleton;
 using Akka.Configuration;
-using MemoryWallet.Web.Actors;
+using Akka.Routing;
+using MemoryWallet.Lib;
+using MemoryWallet.ProcessManager.Actor;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace MemoryWallet.Web
 {
-    public delegate IActorRef SportsBookManagerSystemActorProvider();
-
-    public delegate ActorSelection SportsBookManagerRemoteActorPRovider();
-    
     public class Startup
     {
-        private readonly ILogger _startupLogger;
-        private readonly ILogger<IActorRef> _actorLogger;
+        public delegate ActorSelection PlayerManagerProvider();
+        public delegate IActorRef PlayerBookProxyProvider();
 
-        public Startup(ILogger<Startup> startupLogger, ILogger<IActorRef> actorLogger)
+        public Startup(IConfiguration configuration)
         {
-            _startupLogger = startupLogger;
-            _actorLogger = actorLogger;
+            Configuration = configuration;
         }
-        
+
+        public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        public void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection s)
         {
-            var config = ConfigurationFactory.ParseString(@"
-akka {  
-    actor {
-        provider = remote
-    }
-    remote {
-        dot-netty.tcp {
-            port = 0
-            hostname = 0.0.0.0
-            public-hostname = localhost
-        }
-    }
-}
-");
-            services.AddSingleton(_ => ActorSystem.Create("SportsbookStore", config));
-
-            // Local actor
-            services.AddSingleton<SportsBookManagerSystemActorProvider>(p =>
+            s.AddMvc(c => { c.EnableEndpointRouting = false; });
+            s.AddSingleton<ActorSystem>(s =>
             {
-                var actorSystem = p.GetService<ActorSystem>();
+                var fs = s.GetService<IBaseFileFactory>();
 
-                var b = actorSystem.ActorOf(SportsBookManagerActor.Props(_actorLogger));
-                return () => b;
+                var conf = ConfigurationFactory.ParseString(fs.ReadRelative("web.hocon"));
+                
+                var system = ActorSystem.Create("sbk", conf);
+
+                var playerManagers = system.ActorOf(
+                    Props.Empty.WithRouter(FromConfig.Instance), 
+                    "player-managers");
+                
+                var playerbook = system.ActorOf(ClusterSingletonProxy.Props(
+                        singletonManagerPath: "/user/playerbook",
+                        settings: ClusterSingletonProxySettings.Create(system).WithRole("player-manager")),
+                    name: "playerbook-proxy");
+
+                var logger = system.Log;
+                logger.Info($"Player Manager:  ------->>>  {playerManagers}");
+                
+                logger.Info($"Playerbook ----->> {playerbook}");
+
+                logger.Info($"{system.Name}");
+                return system;
             });
+
+            s.AddTransient<PlayerManagerProvider>(s =>
+            {
+                var sys = s.GetService<ActorSystem>();
+                return () => sys.ActorSelection("/user/player-managers");
+            });
+//
+//            s.AddTransient<PlayerBookProxyProvider>(s =>
+//            {
+//                var sys = s.GetService<ActorSystem>();
+//                var playerbook = sys.ActorOf(ClusterSingletonProxy.Props(
+//                        singletonManagerPath: "/user/playerbook",
+//                        settings: ClusterSingletonProxySettings.Create(sys).WithRole("player-manager")),
+//                    name: "playerbook-proxy-web");
+//                return () => playerbook;
+//            });
             
-            // Remote Actor
-            services.AddSingleton<SportsBookManagerRemoteActorPRovider>(p =>
-            {
-                var actorSelection = p.GetService<ActorSystem>();
-                return () => actorSelection.ActorSelection("akka.tcp://MemoryWallet@localhost:8080/user/Sportsbook/PlayerManager");
-            });
-
-            services.AddMvc();
+            s.BuildCommonDependency();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
-            IApplicationLifetime applicationLifetime)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime lifetime)
         {
+            lifetime.ApplicationStarted.Register(() =>
+            {
+                // Initialize logger
+                var logger = app.ApplicationServices.GetService<ILogger>();
+
+                // Initialize System Actor
+                var system = app.ApplicationServices.GetService<ActorSystem>();
+
+                // mount router in system
+                                //var hub = app.ApplicationServices.GetService<IHubContext<SoftpaqHub>>();
+
+//                system.ActorOf(MotherShip.Props(), ActorPaths.Mothership.Name);
+//                system.ActorOf(HubBroadCaster.Props(hub), ActorPaths.SignalrHub.Name);
+//                system.ActorOf(Props.Empty.WithRouter(FromConfig.Instance), ActorPaths.Hub.Name);
+
+//                var dlActor = system.ActorOf(DeadLetterMonitorActor.Props(), "deadletter-monitor");
+
+//                system.EventStream.Subscribe(dlActor, typeof(DeadLetter));
+            });
+
+            // Akka System Shutdown
+            lifetime.ApplicationStopping.Register(() =>
+            {
+                var logger = app.ApplicationServices.GetService<ILogger>();
+                var system = app.ApplicationServices.GetService<ActorSystem>();
+                logger.Warning("SmrWeb is being terminated... leaving cluster");
+
+                var cluster = Akka.Cluster.Cluster.Get(system);
+                cluster.Leave(cluster.SelfAddress);
+
+                CoordinatedShutdown.Get(system)
+                    .Run(CoordinatedShutdown.ClrExitReason.Instance)
+                    .Wait();
+
+                logger.Warning("SmrWeb Terminated");
+            });
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            applicationLifetime.ApplicationStarted.Register(() =>
+            else
             {
-                app.ApplicationServices.GetService<ActorSystem>();
-            });
+                app.UseExceptionHandler("/Error");
+            }
 
-            applicationLifetime.ApplicationStopped.Register(() =>
-            {
-                app.ApplicationServices.GetService<ActorSystem>().Terminate().Wait();
-            });
-
-            app.UseMvc();
+            app.UseStaticFiles();
+            
             app.UseMvcWithDefaultRoute();
+            
+            app.UseAuthorization();
         }
     }
 }

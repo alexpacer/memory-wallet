@@ -1,23 +1,52 @@
-using System.Threading.Tasks;
-using IdGen;
+using System;
 using MemoryWallet.Lib.Model;
 
 namespace MemoryWallet.Lib.Repository
 {
     public class PlayerRepository : IPlayerRepository
     {
-        async Task<PlayerProfile> IPlayerRepository.GetPlayer(string email)
-        {
-            var idGenerator = new IdGenerator(0);
-           
-            var alexProfile = new PlayerProfile {Name = "Alex", Id = idGenerator.CreateId(), Balance = 3000 };
+        private readonly IFileDirHelper _fileDirHelper;
+        private readonly string _playerRepoFolder;
 
-            return await Task.FromResult(alexProfile);
+        public PlayerRepository(IFileDirHelper fileDirHelper)
+        {
+            _fileDirHelper = fileDirHelper;
+            _playerRepoFolder = _fileDirHelper.BuildPath(
+                EnvVar.DataStorageLocation,
+                "players");
+            _fileDirHelper.CreateIfNotExists(_playerRepoFolder);
+        }
+
+        PlayerProfile IPlayerRepository.GetPlayer(long id)
+        {
+            var playerData = _fileDirHelper.BuildPath(_playerRepoFolder, id.ToString());
+            if (!_fileDirHelper.FileExists(playerData))
+                throw new Exception($"Player Data does not exists {playerData}");
+
+            var ms = _fileDirHelper.ReadAllText(playerData);
+            var playerProfile = Extensions.ConvertToPlayerProfile(ms);
+
+            return playerProfile;
+        }
+
+        void IPlayerRepository.CreatePlayer(PlayerProfile profile)
+        {
+            var playerData = _fileDirHelper.BuildPath(
+                _playerRepoFolder,
+                profile.Id.ToString());
+
+            if (!_fileDirHelper.FileExists(playerData))
+            {
+                var playerStream = profile.ToJsonString();
+                _fileDirHelper.CreateTextFile(playerData, playerStream);
+            }
         }
     }
 
     public interface IPlayerRepository
     {
-        Task<PlayerProfile> GetPlayer(string email);
+        PlayerProfile GetPlayer(long id);
+
+        void CreatePlayer(PlayerProfile profile);
     }
 }

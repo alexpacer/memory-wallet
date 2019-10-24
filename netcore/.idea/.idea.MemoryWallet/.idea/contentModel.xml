@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Alex Wei\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Alex Wei\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_MemoryWallet.-2132594180.00" t="ExcludeRecursive" />
-    <e p="E:\git\awei\memory-wallet\netcore" t="IncludeFlat">
+    <e p="C:\Users\weial\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\weial\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_MemoryWallet.-339635312.00" t="ExcludeRecursive" />
+    <e p="C:\Users\weial\git\alex\memory-wallet\netcore" t="IncludeFlat">
       <e p="MemoryWallet.Lib" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="EnvVar.cs" t="Include" />
+        <e p="Extensions.cs" t="Include" />
+        <e p="IBaseFileFactory.cs" t="Include" />
+        <e p="IFileDirHelper.cs" t="Include" />
         <e p="MemoryWallet.Lib.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
+          <e p="ICreatePlayerEvt.cs" t="Include" />
           <e p="PlayerProfile.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="MemoryWallet.Lib.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -22,48 +27,74 @@
           <e p="PlayerRepository.cs" t="Include" />
         </e>
       </e>
-      <e p="MemoryWallet.Service" t="IncludeRecursive">
-        <e p="Actor" t="Include">
-          <e p="PlayerActor.cs" t="Include" />
-          <e p="PlayerManagerActor.cs" t="Include" />
-          <e p="SportsBookActor.cs" t="Include" />
-        </e>
-        <e p="akka.conf" t="Include" />
+      <e p="MemoryWallet.LightHouse" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DI.cs" t="Include" />
-        <e p="MemoryWallet.cs" t="Include" />
-        <e p="MemoryWallet.Service.csproj" t="IncludeRecursive" />
-        <e p="Model" t="Include" />
-        <e p="nlog.config" t="Include" />
-        <e p="nlog.xsd" t="Include" />
+        <e p="lighthouse.hocon" t="Include" />
+        <e p="MemoryWallet.LightHouse.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="MemoryWallet.Service.AssemblyInfo.cs" t="Include" />
+            <e p="netcoreapp3.0" t="Include">
+              <e p="MemoryWallet.LightHouse.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />
       </e>
+      <e p="MemoryWallet.ProcessManager" t="IncludeRecursive">
+        <e p="Actor" t="Include">
+          <e p="PlayerActor.cs" t="Include" />
+          <e p="PlayerBook.cs" t="Include" />
+          <e p="PlayerManagerActor.cs" t="Include" />
+          <e p="SportsBookActor.cs" t="Include" />
+        </e>
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DI.cs" t="Include" />
+        <e p="MemoryWallet.cs" t="Include" />
+        <e p="MemoryWallet.ProcessManager.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="MemoryWallet.ProcessManager.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="process-manager.hocon" t="Include" />
+        <e p="Program.cs" t="Include" />
+      </e>
       <e p="MemoryWallet.sln" t="IncludeFlat" />
       <e p="MemoryWallet.Web" t="IncludeRecursive">
-        <e p="Actors" t="Include">
-          <e p="SportsBookManagerActor.cs" t="Include" />
-        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="HomeController.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
         </e>
         <e p="MemoryWallet.Web.csproj" t="IncludeRecursive" />
-        <e p="nlog.config" t="Include" />
+        <e p="Models" t="Include">
+          <e p="RegisterPlayerModel.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
+            <e p="netcoreapp3.0" t="Include">
               <e p="MemoryWallet.Web.AssemblyInfo.cs" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Pages" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Error.cshtml.cs" t="Include" />
+          <e p="Index.cshtml" t="Include" />
+          <e p="Index.cshtml.cs" t="Include" />
+          <e p="Privacy.cshtml" t="Include" />
+          <e p="Privacy.cshtml.cs" t="Include" />
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
         </e>
         <e p="Program.cs" t="Include" />
@@ -71,17 +102,82 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="ViewModel" t="Include">
-          <e p="LoginViewModel.cs" t="Include" />
-        </e>
         <e p="Views" t="Include">
-          <e p="Home" t="Include">
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Player" t="Include">
             <e p="Index.cshtml" t="Include" />
-            <e p="Login.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="web.hocon" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="js" t="Include">
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
           </e>
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Services" t="Include" />
     </e>
   </component>
 </project>
