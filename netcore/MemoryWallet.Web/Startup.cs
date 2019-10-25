@@ -29,6 +29,8 @@ namespace MemoryWallet.Web
         public void ConfigureServices(IServiceCollection s)
         {
             s.AddMvc(c => { c.EnableEndpointRouting = false; });
+            s.AddSignalR();
+            
             s.AddSingleton<ActorSystem>(s =>
             {
                 var fs = s.GetService<IBaseFileFactory>();
@@ -88,6 +90,7 @@ namespace MemoryWallet.Web
                 // mount router in system
                                 //var hub = app.ApplicationServices.GetService<IHubContext<SoftpaqHub>>();
 
+                                 
 //                system.ActorOf(MotherShip.Props(), ActorPaths.Mothership.Name);
 //                system.ActorOf(HubBroadCaster.Props(hub), ActorPaths.SignalrHub.Name);
 //                system.ActorOf(Props.Empty.WithRouter(FromConfig.Instance), ActorPaths.Hub.Name);
@@ -123,6 +126,7 @@ namespace MemoryWallet.Web
                 app.UseExceptionHandler("/Error");
             }
 
+            
             app.UseStaticFiles();
             
             app.UseMvcWithDefaultRoute();

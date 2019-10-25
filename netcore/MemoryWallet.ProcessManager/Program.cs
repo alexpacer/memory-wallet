@@ -19,31 +19,30 @@ namespace MemoryWallet.ProcessManager
             
             logger.Info($"Joining cluster {system.Name}");
             
+            // Singleton actor that keeps book of record of a player
             system.ActorOf(ClusterSingletonManager.Props(
                 singletonProps: PlayerBook.Props(),
                 terminationMessage: PoisonPill.Instance,
                 settings: ClusterSingletonManagerSettings.Create(system).WithRole("player-manager")
             ), "playerbook");
-
+            
+            
+            system.ActorOf(ClusterSingletonProxy.Props(
+                    singletonManagerPath: "/user/playerbook",
+                    settings: ClusterSingletonProxySettings.Create(system)
+                        .WithRole("player-manager")),
+                name: "playerbook-proxy");
+            
             // create local player manager instances with router.
-            var pm = system.ActorOf(
-                PlayerManagerActor.Props().WithRouter(FromConfig.Instance),
-                "player-manager");
-
-            var clusterPm = system.ActorOf(
-                Props.Empty.WithRouter(FromConfig.Instance), 
-                "player-managers");
-            
-            
+            var pm = system.ActorOf(PlayerManagerActor.Props(), "player-manager");
+//            var pm = system.ActorOf(
+//                PlayerManagerActor.Props().WithRouter(FromConfig.Instance),
+//                "player-manager");
+//
+//            
             logger.Info($"{pm.Path} created.");
             
-            
-            clusterPm.Tell(new PlayerManagerActor.HelloWorld("H---------------------->Dsadasdasdasdasdfewe3kojnf3erowgfnrewokqgnfrqewopnf"));
-            
-            
-
             Console.ReadLine();
-
 
             CoordinatedShutdown.Get(system)
                 .Run(CoordinatedShutdown.ClrExitReason.Instance)

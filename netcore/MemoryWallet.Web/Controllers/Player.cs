@@ -1,6 +1,6 @@
 using Akka.Actor;
+using MemoryWallet.Lib;
 using MemoryWallet.Lib.Model;
-using MemoryWallet.ProcessManager.Actor;
 using MemoryWallet.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -11,16 +11,13 @@ namespace MemoryWallet.Web.Controllers
     public class Player : Controller
     {
         private readonly ILogger _logger;
-        private readonly ActorSelection _actorSelection;
-//        private readonly IActorRef _playerBookProxy;
+        private readonly ActorSelection _playerManagers;
         
         public Player(Startup.PlayerManagerProvider provider, 
-//            Startup.PlayerBookProxyProvider playerBookProxyProvider,
             ILogger logger)
         {
             _logger = logger;
-//            _playerBookProxy = playerBookProxyProvider();
-            _actorSelection = provider();
+            _playerManagers = provider();
         }
         
         [HttpGet("")]
@@ -40,10 +37,31 @@ namespace MemoryWallet.Web.Controllers
         {
             var newPlayer = new CreatePlayerEvt(req.Name, req.Email);
             
-            _logger.Warning($"telling: {_actorSelection}");
-            _actorSelection.Tell(newPlayer);
+            _logger.Warning($"telling: {_playerManagers}");
+            _playerManagers.Tell(newPlayer);
             
             return Redirect("/");
+        }
+        
+        [HttpGet("login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        
+        [HttpPost("login")]
+        public IActionResult DoLogin(PlayerLoginModel req)
+        {
+            var loginCmd = new PlayerLoginEvt(req.Email);
+            _playerManagers.Tell(loginCmd);
+
+            return Redirect("/player/logging-in");
+        }
+
+        [HttpGet("logging-in")]
+        public IActionResult LoggingIn()
+        {
+            return View();
         }
     }
 }

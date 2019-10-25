@@ -7,23 +7,23 @@ akka {
     provider = cluster
     deployment {
       
-      # This defines local 
-      /player-manager {
-        router = consistent-hashing-pool
-        nr-of-instances = 5
-      }
-
-      /player-managers {
-        router = consistent-hashing-group
+//      # This defines local 
+//      /player-manager {
+//        router = consistent-hashing-pool
+//        nr-of-instances = 5
+//      }
+      
+      # This route broadcast to all player-managers with-in cluster
+      /player-manager/broadcaster {
+        router = broadcast-group
         routees.paths = ["/user/player-manager"]
         cluster {
           enabled = on
           allow-local-routees = on
-          max-nr-of-instances-per-node = 5
-          user-role = "player-manager"
+          use-role = "player-manager"
         }
       }
-
+      
       /fixture-finders {
         router = round-robin-pool
         nr-of-instances = 5
@@ -93,7 +93,7 @@ akka {
     seed-nodes = [
       "akka.tcp://sbk@localhost:2551"
     ]
-    roles = ["process-manager", "player-manager"]
+    roles = ["player-manager"]
   }
 
 

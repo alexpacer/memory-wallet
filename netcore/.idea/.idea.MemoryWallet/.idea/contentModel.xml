@@ -12,7 +12,9 @@
         <e p="IFileDirHelper.cs" t="Include" />
         <e p="MemoryWallet.Lib.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
+          <e p="DoYouHaveThisPlayerReq.cs" t="Include" />
           <e p="ICreatePlayerEvt.cs" t="Include" />
+          <e p="PlayerIdMap.cs" t="Include" />
           <e p="PlayerProfile.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -70,12 +72,17 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="Home.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+        </e>
+        <e p="Hubs" t="Include">
+          <e p="PlayerHub.cs" t="Include" />
         </e>
         <e p="MemoryWallet.Web.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="RegisterPlayerModel.cs" t="Include" />
         </e>
+        <e p="node_modules\@microsoft\signalr" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -83,20 +90,8 @@
             </e>
           </e>
         </e>
-        <e p="Pages" t="Include">
-          <e p="_ViewImports.cshtml" t="Include" />
-          <e p="_ViewStart.cshtml" t="Include" />
-          <e p="Error.cshtml" t="Include" />
-          <e p="Error.cshtml.cs" t="Include" />
-          <e p="Index.cshtml" t="Include" />
-          <e p="Index.cshtml.cs" t="Include" />
-          <e p="Privacy.cshtml" t="Include" />
-          <e p="Privacy.cshtml.cs" t="Include" />
-          <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
-            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
-          </e>
-        </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -104,8 +99,13 @@
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
           <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
           <e p="Player" t="Include">
             <e p="Index.cshtml" t="Include" />
+            <e p="loggingIn.cshtml" t="Include" />
+            <e p="login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
@@ -172,6 +172,12 @@
               <e p="jquery.validate.unobtrusive.js" t="Include" />
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
               <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="signalr" t="Include">
+              <e p="signalr.js" t="Include" />
+              <e p="signalr.js.map" t="Include" />
+              <e p="signalr.min.js" t="Include" />
+              <e p="signalr.min.js.map" t="Include" />
             </e>
           </e>
         </e>

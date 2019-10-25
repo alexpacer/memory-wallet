@@ -8,11 +8,16 @@ namespace MemoryWallet.ProcessManager.Actor
     public class PlayerActor : ReceivePersistentActor
     {
         private readonly PlayerProfile _profile;
+        private readonly PlayerIdMap _playerIdMap;
         private readonly ILoggingAdapter _log = Context.GetLogger();
 
-        public PlayerActor(PlayerProfile profile)
+        public PlayerActor(PlayerIdMap playerIdMap)
         {
-            _profile = profile;
+            _playerIdMap = playerIdMap;
+            
+            // TODO: We might want to store some more interesting information of this player
+            // they can be stored in other storage rather then in memory so fuck that for now
+            _profile = new PlayerProfile(_playerIdMap.Id, null, _playerIdMap.Email);
 
             Recover<DepositEvt>(d => _profile.Deposit(d.Amt));
             Recover<WithdrawalEvt>(w => _profile.Withdrawal(w.Amt));
@@ -29,12 +34,12 @@ namespace MemoryWallet.ProcessManager.Actor
             });
         }
 
-        public static Props Props(PlayerProfile profile)
+        public static Props Props(PlayerIdMap profile)
         {            
             return Akka.Actor.Props.Create(() => new PlayerActor(profile));
         }
 
-        public override string PersistenceId => $"player-{_profile.Id}";
+        public override string PersistenceId => $"player-{_playerIdMap.Id}";
         
         public class DepositEvt
         {

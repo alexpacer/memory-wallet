@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
 using Akka.Actor;
 using Akka.Event;
 using Akka.Persistence;
+using MemoryWallet.Lib.Model;
 
 namespace MemoryWallet.ProcessManager.Actor
 {
@@ -11,14 +13,37 @@ namespace MemoryWallet.ProcessManager.Actor
     public class PlayerBook : ReceivePersistentActor
     {
         private readonly ICollection<PlayerIdMap> _playerIdMaps;
-        private ILoggingAdapter _logger = Context.GetLogger();
+        private readonly ILoggingAdapter _logger = Context.GetLogger();
 
         public PlayerBook()
         {
+            _playerIdMaps = new List<PlayerIdMap>();
+            
             Recover<PlayerRegisteredEvt>(AddPlayer);
 
             Command<PlayerRegisteredEvt>(cmd => Persist(cmd, AddPlayer));
-            Command<RecoveryCompleted>(completed => _logger.Info($"PlayerBook Recovery completed."));
+            Command<RecoveryCompleted>(completed => _logger.Warning($"PlayerBook Recovery completed."));
+            Command<string>(s =>
+            {
+                _logger.Info($"string {s} received in playerbook");
+            });
+
+            Command<FindPlayerIdReq>(q =>
+            {
+                _logger.Info($"[{Self.Path}]:Looking up for player {q.Email}");
+                
+                var playerIdMap = _playerIdMaps.FirstOrDefault(p => p.Email == q.Email);
+                
+                if (playerIdMap != null)
+                {
+                    _logger.Info($"[{Self.Path}]:Player {q.Email} found! {playerIdMap.Id}:{playerIdMap.Email}");
+                    Sender.Tell(playerIdMap);
+                }
+                else
+                {
+                    _logger.Info($"[{Self.Path}]:Player {q.Email} not found");                    
+                }
+            });
         }
 
         private void AddPlayer(PlayerRegisteredEvt playerIdMap)
@@ -37,7 +62,6 @@ namespace MemoryWallet.ProcessManager.Actor
 
         public override string PersistenceId => $"playerbook";
 
-
         public class PlayerRegisteredEvt
         {
             public PlayerRegisteredEvt(long id, string name, string email)
@@ -51,11 +75,16 @@ namespace MemoryWallet.ProcessManager.Actor
             public string Name { get; private set; }
             public string Email { get; private set; }
         }
-    }
 
-    public class PlayerIdMap
-    {
-        public long Id { get; set; }
-        public string Email { get; set; }
+        public class FindPlayerIdReq
+        {
+            public FindPlayerIdReq(string email)
+            {
+                Email = email;
+            }
+
+            public string Email { get; }
+        }
     }
+    
 }

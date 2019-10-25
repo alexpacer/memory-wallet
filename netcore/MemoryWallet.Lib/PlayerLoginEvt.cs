@@ -1,8 +1,15 @@
-﻿namespace MemoryWallet.Lib
+﻿using Akka.Routing;
+
+namespace MemoryWallet.Lib
 {
-    public class PlayerLoginEvt
+    public class PlayerLoginEvt : IConsistentHashable
     {
-        public string Email { get; set; }
-        public long Id { get; set; }
+        public PlayerLoginEvt(string email)
+        {
+            Email = email;
+        }
+
+        public string Email { get; }
+        public object ConsistentHashKey => Email;
     }
 }
