@@ -43,16 +43,9 @@ namespace MemoryWallet.Web
                     Props.Empty.WithRouter(FromConfig.Instance), 
                     "player-managers");
                 
-                var playerbook = system.ActorOf(ClusterSingletonProxy.Props(
-                        singletonManagerPath: "/user/playerbook",
-                        settings: ClusterSingletonProxySettings.Create(system).WithRole("player-manager")),
-                    name: "playerbook-proxy");
 
                 var logger = system.Log;
                 logger.Info($"Player Manager:  ------->>>  {playerManagers}");
-                
-                logger.Info($"Playerbook ----->> {playerbook}");
-
                 logger.Info($"{system.Name}");
                 return system;
             });
@@ -62,16 +55,20 @@ namespace MemoryWallet.Web
                 var sys = s.GetService<ActorSystem>();
                 return () => sys.ActorSelection("/user/player-managers");
             });
-//
-//            s.AddTransient<PlayerBookProxyProvider>(s =>
-//            {
-//                var sys = s.GetService<ActorSystem>();
-//                var playerbook = sys.ActorOf(ClusterSingletonProxy.Props(
-//                        singletonManagerPath: "/user/playerbook",
-//                        settings: ClusterSingletonProxySettings.Create(sys).WithRole("player-manager")),
-//                    name: "playerbook-proxy-web");
-//                return () => playerbook;
-//            });
+
+            s.AddTransient<PlayerBookProxyProvider>(s =>
+            {
+                var sys = s.GetService<ActorSystem>();
+                var logger = sys.Log;
+                var playerbook = sys.ActorOf(ClusterSingletonProxy.Props(
+                        singletonManagerPath: "/user/playerbook",
+                        settings: ClusterSingletonProxySettings.Create(sys)
+                            .WithRole("player-manager")),
+                    name: "playerbook-proxy");
+                logger.Info($"Playerbook ----->> {playerbook}");
+
+                return () => playerbook;
+            });
             
             s.BuildCommonDependency();
         }

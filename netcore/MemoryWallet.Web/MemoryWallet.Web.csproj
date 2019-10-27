@@ -27,4 +27,9 @@
     </None>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Actors" />
+  </ItemGroup>
+
 </Project>

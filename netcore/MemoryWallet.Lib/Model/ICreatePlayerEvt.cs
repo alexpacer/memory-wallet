@@ -7,7 +7,7 @@ namespace MemoryWallet.Lib.Model
         public string Name { get; }
         public string Email { get; }
     }
-    
+
     public class CreatePlayerEvt : ICreatePlayerEvt, IConsistentHashable
     {
         public CreatePlayerEvt(string name, string email)
@@ -15,11 +15,10 @@ namespace MemoryWallet.Lib.Model
             Name = name;
             Email = email;
         }
-        
+
         public string Name { get; }
         public string Email { get; }
 
         public object ConsistentHashKey => Email;
     }
-
 }

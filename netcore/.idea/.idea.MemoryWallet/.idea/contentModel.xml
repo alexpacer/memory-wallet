@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\weial\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\weial\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_MemoryWallet.-339635312.00" t="ExcludeRecursive" />
-    <e p="C:\Users\weial\git\alex\memory-wallet\netcore" t="IncludeFlat">
+    <e p="C:\Users\alex\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\alex\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_MemoryWallet.-156135370.00" t="ExcludeRecursive" />
+    <e p="E:\git\memory-wallet\netcore" t="IncludeFlat">
       <e p="MemoryWallet.Lib" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="EnvVar.cs" t="Include" />
@@ -14,6 +14,7 @@
         <e p="Model" t="Include">
           <e p="DoYouHaveThisPlayerReq.cs" t="Include" />
           <e p="ICreatePlayerEvt.cs" t="Include" />
+          <e p="PlayerAlreadyRegisteredEvt.cs" t="Include" />
           <e p="PlayerIdMap.cs" t="Include" />
           <e p="PlayerProfile.cs" t="Include" />
         </e>
@@ -68,6 +69,8 @@
       </e>
       <e p="MemoryWallet.sln" t="IncludeFlat" />
       <e p="MemoryWallet.Web" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="Actors" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

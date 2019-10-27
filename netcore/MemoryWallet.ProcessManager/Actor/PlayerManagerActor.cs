@@ -67,7 +67,7 @@ namespace MemoryWallet.ProcessManager.Actor
 
                 _playerBookProxy.Tell(newPlayerCmd);
 
-                _playerRepository.CreatePlayer(newProfile);
+//                _playerRepository.CreatePlayer(newProfile);
             });
 
             Receive<PlayerLogoutEvt>(l =>

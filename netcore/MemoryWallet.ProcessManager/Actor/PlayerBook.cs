@@ -21,7 +21,18 @@ namespace MemoryWallet.ProcessManager.Actor
             
             Recover<PlayerRegisteredEvt>(AddPlayer);
 
-            Command<PlayerRegisteredEvt>(cmd => Persist(cmd, AddPlayer));
+            Command<PlayerRegisteredEvt>(cmd =>
+            {
+                // Check if user exists before persist the event
+
+                if (_playerIdMaps.FirstOrDefault(p => p.Email == cmd.Email) != null)
+                {
+                    Sender.Tell(new PlayerAlreadyRegisteredEvt(cmd.Email));
+                    return;
+                }
+
+                Persist(cmd, AddPlayer);
+            });
             Command<RecoveryCompleted>(completed => _logger.Warning($"PlayerBook Recovery completed."));
             Command<string>(s =>
             {
