@@ -1,8 +1,10 @@
 using Akka.Actor;
 using MemoryWallet.Lib;
 using MemoryWallet.Lib.Model;
+using MemoryWallet.Web.Hubs;
 using MemoryWallet.Web.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Serilog;
 
 namespace MemoryWallet.Web.Controllers
@@ -12,10 +14,12 @@ namespace MemoryWallet.Web.Controllers
     {
         private readonly ILogger _logger;
         private readonly ActorSelection _playerManagers;
+        private readonly IHubContext<PlayerHub> _playerHub;
         
-        public Player(Startup.PlayerManagerProvider provider, 
+        public Player(Startup.PlayerManagerProvider provider, IHubContext<PlayerHub> playerHub, 
             ILogger logger)
         {
+            _playerHub = playerHub;
             _logger = logger;
             _playerManagers = provider();
         }
@@ -29,6 +33,8 @@ namespace MemoryWallet.Web.Controllers
         [HttpGet("register")]
         public IActionResult Register()
         {
+            var clients = _playerHub.Clients;
+            clients.Group("asd");
             return View();
         }
         

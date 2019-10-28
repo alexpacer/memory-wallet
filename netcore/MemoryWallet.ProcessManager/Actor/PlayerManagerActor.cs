@@ -60,13 +60,11 @@ namespace MemoryWallet.ProcessManager.Actor
             Receive<CreatePlayerEvt>(c =>
             {
                 var playerId = _idGenerator.CreateId();
-
-                var newProfile = new PlayerProfile(id: playerId, name: c.Name, email: c.Email);
-
                 var newPlayerCmd = new PlayerBook.PlayerRegisteredEvt(playerId, c.Name, c.Email);
 
                 _playerBookProxy.Tell(newPlayerCmd);
 
+//                var newProfile = new PlayerProfile(id: playerId, name: c.Name, email: c.Email);
 //                _playerRepository.CreatePlayer(newProfile);
             });
 

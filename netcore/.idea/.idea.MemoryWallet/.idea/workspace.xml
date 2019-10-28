@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c768e2-d443-40ae-8167-27c43b0dd782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Actors/WebHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,46 +29,47 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Hubs/PlayerHub.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Controllers/Home.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Home/index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/loggingIn.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IFileDirHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/EnvVar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Models/RegisterPlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/MemoryWallet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/loggingIn.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerIdMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Player/index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/SportsBookActor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerActor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/PlayerLoginEvt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/EnvVar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IBaseFileFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IFileDirHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/DoYouHaveThisPlayerReq.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerIdMap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Repository/PlayerRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/MemoryWallet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E475FC9F-57ED-43C2-A74C-4B5E924CC2D6/c9/a30d9bb5/ServiceCollectionContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Views/Home/index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Controllers/Home.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Actors/WebHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Hubs/PlayerHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IBaseFileFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B64B2F59-F602-48DB-96A0-B09B42851BE3/63/8d21b4d3/ActorSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Repository/PlayerRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/PlayerLoginEvt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Models/RegisterPlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MemoryWallet.Lib/MemoryWallet.Lib.csproj" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Service/Actor/SportsBookActor.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/IBaseFileFactory.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Service/MemoryWallet.Service.csproj" />
@@ -69,10 +77,8 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Service/Program.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Service/DI.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/appsettings.json" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Index.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Program.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/SportsBookActor.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.LightHouse/appsettings.json" />
         <option value="$PROJECT_DIR$/MemoryWallet.LightHouse/lighthouse.hocon" />
@@ -84,11 +90,7 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/index.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/MemoryWallet.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerProfile.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Models/RegisterPlayerModel.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Hubs/PlayerHub.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Home.cs" />
@@ -100,16 +102,25 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/login.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/PlayerLoginEvt.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/loggingIn.cshtml" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Repository/PlayerRepository.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/System.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/WebHub.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/appsettings.json" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" />
       </list>
     </option>
   </component>
@@ -140,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected=".NET Project.ProcessManager">
+  <component name="RunManager" selected=".NET Project.Lighthouse">
     <configuration name="MemoryWallet.Web" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
@@ -186,6 +197,9 @@
       <workItem from="1571982294548" duration="10196000" />
       <workItem from="1572022467870" duration="1117000" />
       <workItem from="1572092616850" duration="5932000" />
+      <workItem from="1572228148328" duration="20316000" />
+      <workItem from="1572256804323" duration="148000" />
+      <workItem from="1572257148727" duration="1047000" />
     </task>
     <servers />
   </component>
@@ -230,19 +244,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs</url>
-          <line>172</line>
-          <properties documentPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" initialLine="159">
-            <startOffsets>
-              <option value="6309" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6405" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,6 +4,7 @@ using Akka.Actor;
 using Akka.Event;
 using Akka.Persistence;
 using MemoryWallet.Lib.Model;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MemoryWallet.ProcessManager.Actor
 {
@@ -14,9 +15,12 @@ namespace MemoryWallet.ProcessManager.Actor
     {
         private readonly ICollection<PlayerIdMap> _playerIdMaps;
         private readonly ILoggingAdapter _logger = Context.GetLogger();
+        private readonly ActorSelection _hub;
+            
 
-        public PlayerBook()
+        public PlayerBook(DI.HubProvider hubProvider)
         {
+            _hub = hubProvider();
             _playerIdMaps = new List<PlayerIdMap>();
             
             Recover<PlayerRegisteredEvt>(AddPlayer);
@@ -27,7 +31,8 @@ namespace MemoryWallet.ProcessManager.Actor
 
                 if (_playerIdMaps.FirstOrDefault(p => p.Email == cmd.Email) != null)
                 {
-                    Sender.Tell(new PlayerAlreadyRegisteredEvt(cmd.Email));
+                    _hub.Tell(new PlayerAlreadyRegisteredEvt(cmd.Email));
+                    _logger.Warning($"User {cmd.Email} has already registered. telling PlayerAlreadyRegisteredEvt => {_hub.Path}");
                     return;
                 }
 
@@ -68,7 +73,8 @@ namespace MemoryWallet.ProcessManager.Actor
 
         public static Props Props()
         {
-            return Akka.Actor.Props.Create<PlayerBook>(() => new PlayerBook());
+            var hubProvider = DI.Provider.GetRequiredService<DI.HubProvider>();
+            return Akka.Actor.Props.Create<PlayerBook>(() => new PlayerBook(hubProvider));
         }
 
         public override string PersistenceId => $"playerbook";

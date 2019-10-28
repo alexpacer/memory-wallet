@@ -1,7 +1,4 @@
 using System;
-using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.Json;
 using IdGen;
 using MemoryWallet.Lib.Model;
@@ -24,6 +21,7 @@ namespace MemoryWallet.Lib
                     "appsettings.json",
                     false, true)
                 .Build();
+            c.AddTransient<IConfiguration>(srv => config);
 
             c.AddTransient<IPlayerRepository, PlayerRepository>();
 

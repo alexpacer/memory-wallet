@@ -18,14 +18,26 @@ akka {
           user-role = "player-manager"
         }
       }
+
+      /hub {
+        router = broadcast-group
+        routees.paths = ["/user/web-hub"]
+        cluster {
+          enabled = on
+          allow-local-routees = on
+          use-role = web
+        }
+      }
+      
+      
     }
 
     debug {
-      receive = on
-      autoreceive = on
-      lifecycle = on
-      event-stream = on
-      unhandled = on
+//      receive = on
+//      autoreceive = on
+//      lifecycle = on
+//      event-stream = on
+//      unhandled = on
     }
   }
 

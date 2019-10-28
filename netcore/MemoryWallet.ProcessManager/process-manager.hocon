@@ -23,6 +23,17 @@ akka {
           use-role = "player-manager"
         }
       }
+
+      /hub {
+        router = broadcast-group
+        routees.paths = ["/user/web-hub"]
+        cluster {
+          enabled = on
+          allow-local-routees = off
+          use-role = web
+        }
+      }
+      
       
       /fixture-finders {
         router = round-robin-pool
@@ -43,11 +54,11 @@ akka {
 
 
     debug {
-//      receive = on
-//      autoreceive = on
-//      lifecycle = on
-//      event-stream = on
-//      unhandled = on
+      receive = on
+      autoreceive = on
+      lifecycle = on
+      event-stream = on
+      unhandled = on
     }
     
     
