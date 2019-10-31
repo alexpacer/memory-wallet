@@ -10,6 +10,8 @@ namespace MemoryWallet.Lighthouse
         {
             var system = DI.SystemActor;
 
+            
+            
 
             var logger = system.Log;
 

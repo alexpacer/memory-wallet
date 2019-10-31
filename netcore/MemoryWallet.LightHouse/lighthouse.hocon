@@ -29,5 +29,6 @@
       "akka.tcp://sbk@localhost:2551"
     ]
     roles = ["lighthouse"]
+    role.["player-manager"].min-nr-of-members = 1
   }
 }

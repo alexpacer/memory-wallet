@@ -70,24 +70,119 @@
       <e p="MemoryWallet.sln" t="IncludeFlat" />
       <e p="MemoryWallet.Web" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
-        <e p="Actors" t="Include">
-          <e p="SystemActor.cs" t="Include" />
-          <e p="WebHub.cs" t="Include" />
-        </e>
+        <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include">
-          <e p="Home.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
+        <e p="ClientApp" t="Include">
+          <e p=".eslintrc.json" t="Include" />
+          <e p=".gitignore" t="Include" />
+          <e p="node_modules\@babel\parser" t="IncludeRecursive" />
+          <e p="node_modules\@babel\types" t="IncludeRecursive" />
+          <e p="node_modules\@jest\console" t="IncludeRecursive" />
+          <e p="node_modules\@jest\fake-timers" t="IncludeRecursive" />
+          <e p="node_modules\@jest\source-map" t="IncludeRecursive" />
+          <e p="node_modules\@jest\test-result" t="IncludeRecursive" />
+          <e p="node_modules\@jest\types" t="IncludeRecursive" />
+          <e p="node_modules\@mrmlnc\readdir-enhanced" t="IncludeRecursive" />
+          <e p="node_modules\@nodelib\fs.stat" t="IncludeRecursive" />
+          <e p="node_modules\@types" t="IncludeRecursive">
+            <e p="babel__generator" t="IncludeRecursive" />
+            <e p="babel__template" t="IncludeRecursive" />
+            <e p="babel__traverse" t="IncludeRecursive" />
+            <e p="history" t="IncludeRecursive" />
+            <e p="istanbul-lib-coverage" t="IncludeRecursive" />
+            <e p="istanbul-lib-report" t="IncludeRecursive" />
+            <e p="jest" t="IncludeRecursive" />
+            <e p="node" t="IncludeRecursive" />
+            <e p="prop-types" t="IncludeRecursive" />
+            <e p="react" t="IncludeRecursive" />
+            <e p="react-dom" t="IncludeRecursive" />
+            <e p="react-redux" t="IncludeRecursive" />
+            <e p="react-router" t="IncludeRecursive" />
+            <e p="react-router-dom" t="IncludeRecursive" />
+            <e p="reactstrap" t="IncludeRecursive" />
+          </e>
+          <e p="node_modules\babel-jest" t="IncludeRecursive" />
+          <e p="node_modules\bootstrap" t="IncludeRecursive" />
+          <e p="node_modules\chalk" t="IncludeRecursive" />
+          <e p="node_modules\chokidar" t="IncludeRecursive" />
+          <e p="node_modules\connected-react-router" t="IncludeRecursive" />
+          <e p="node_modules\cross-env" t="IncludeRecursive" />
+          <e p="node_modules\csstype" t="IncludeRecursive" />
+          <e p="node_modules\dotenv-expand" t="IncludeRecursive" />
+          <e p="node_modules\eslint" t="IncludeRecursive" />
+          <e p="node_modules\eslint-plugin-flowtype" t="IncludeRecursive" />
+          <e p="node_modules\eslint-plugin-import" t="IncludeRecursive" />
+          <e p="node_modules\eslint-plugin-jsx-a11y" t="IncludeRecursive" />
+          <e p="node_modules\eslint-plugin-react" t="IncludeRecursive" />
+          <e p="node_modules\fast-glob" t="IncludeRecursive" />
+          <e p="node_modules\history" t="IncludeRecursive" />
+          <e p="node_modules\immutable" t="IncludeRecursive" />
+          <e p="node_modules\jest" t="IncludeRecursive" />
+          <e p="node_modules\jest-haste-map" t="IncludeRecursive" />
+          <e p="node_modules\jest-message-util" t="IncludeRecursive" />
+          <e p="node_modules\jest-mock" t="IncludeRecursive" />
+          <e p="node_modules\jest-resolve" t="IncludeRecursive" />
+          <e p="node_modules\jest-serializer" t="IncludeRecursive" />
+          <e p="node_modules\jest-util" t="IncludeRecursive" />
+          <e p="node_modules\jest-worker" t="IncludeRecursive" />
+          <e p="node_modules\jquery" t="IncludeRecursive" />
+          <e p="node_modules\merge" t="IncludeRecursive" />
+          <e p="node_modules\popper.js" t="IncludeRecursive" />
+          <e p="node_modules\react" t="IncludeRecursive" />
+          <e p="node_modules\react-dom" t="IncludeRecursive" />
+          <e p="node_modules\react-redux" t="IncludeRecursive" />
+          <e p="node_modules\react-router" t="IncludeRecursive" />
+          <e p="node_modules\react-router-dom" t="IncludeRecursive" />
+          <e p="node_modules\react-scripts" t="IncludeRecursive" />
+          <e p="node_modules\reactstrap" t="IncludeRecursive" />
+          <e p="node_modules\realpath-native" t="IncludeRecursive" />
+          <e p="node_modules\redux" t="IncludeRecursive" />
+          <e p="node_modules\redux-thunk" t="IncludeRecursive" />
+          <e p="node_modules\rxjs" t="IncludeRecursive" />
+          <e p="node_modules\source-map" t="IncludeRecursive" />
+          <e p="node_modules\symbol-observable" t="IncludeRecursive" />
+          <e p="node_modules\tslib" t="IncludeRecursive" />
+          <e p="node_modules\typescript" t="IncludeRecursive" />
+          <e p="node_modules\typescript-eslint-parser" t="IncludeRecursive" />
+          <e p="node_modules\upath" t="IncludeRecursive" />
+          <e p="node_modules\worker-farm" t="IncludeRecursive" />
+          <e p="package-lock.json" t="Include" />
+          <e p="package.json" t="Include" />
+          <e p="public" t="Include">
+            <e p="favicon.ico" t="Include" />
+            <e p="index.html" t="Include" />
+            <e p="manifest.json" t="Include" />
+          </e>
+          <e p="README.md" t="Include" />
+          <e p="src" t="Include">
+            <e p="App.test.tsx" t="Include" />
+            <e p="App.tsx" t="Include" />
+            <e p="components" t="Include">
+              <e p="Counter.tsx" t="Include" />
+              <e p="FetchData.tsx" t="Include" />
+              <e p="Home.tsx" t="Include" />
+              <e p="Layout.tsx" t="Include" />
+              <e p="NavMenu.css" t="Include" />
+              <e p="NavMenu.tsx" t="Include" />
+            </e>
+            <e p="custom.css" t="Include" />
+            <e p="index.tsx" t="Include" />
+            <e p="react-app-env.d.ts" t="Include" />
+            <e p="registerServiceWorker.ts" t="Include" />
+            <e p="store" t="Include">
+              <e p="configureStore.ts" t="Include" />
+              <e p="Counter.ts" t="Include" />
+              <e p="index.ts" t="Include" />
+              <e p="WeatherForecasts.ts" t="Include" />
+            </e>
+          </e>
+          <e p="tsconfig.json" t="Include" />
         </e>
-        <e p="Hubs" t="Include">
-          <e p="PlayerHub.cs" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="MemoryWallet.Web.csproj" t="IncludeRecursive" />
-        <e p="Models" t="Include">
-          <e p="RegisterPlayerModel.cs" t="Include" />
-        </e>
-        <e p="node_modules\@microsoft\signalr" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.0" t="Include">
@@ -95,97 +190,17 @@
             </e>
           </e>
         </e>
-        <e p="package-lock.json" t="Include" />
-        <e p="package.json" t="Include" />
+        <e p="pages" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Error.cshtml.cs" t="Include" />
+        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="Views" t="Include">
-          <e p="_ViewStart.cshtml" t="Include" />
-          <e p="Home" t="Include">
-            <e p="Index.cshtml" t="Include" />
-          </e>
-          <e p="Player" t="Include">
-            <e p="Index.cshtml" t="Include" />
-            <e p="loggingIn.cshtml" t="Include" />
-            <e p="login.cshtml" t="Include" />
-            <e p="Register.cshtml" t="Include" />
-          </e>
-          <e p="Shared" t="Include">
-            <e p="_Layout.cshtml" t="Include" />
-          </e>
-        </e>
-        <e p="web.hocon" t="Include" />
-        <e p="wwwroot" t="Include">
-          <e p="css" t="Include">
-            <e p="site.css" t="Include" />
-          </e>
-          <e p="favicon.ico" t="Include" />
-          <e p="js" t="Include">
-            <e p="site.js" t="Include" />
-          </e>
-          <e p="lib" t="Include">
-            <e p="bootstrap" t="Include">
-              <e p="dist" t="Include">
-                <e p="css" t="Include">
-                  <e p="bootstrap-grid.css" t="Include" />
-                  <e p="bootstrap-grid.css.map" t="Include" />
-                  <e p="bootstrap-grid.min.css" t="Include" />
-                  <e p="bootstrap-grid.min.css.map" t="Include" />
-                  <e p="bootstrap-reboot.css" t="Include" />
-                  <e p="bootstrap-reboot.css.map" t="Include" />
-                  <e p="bootstrap-reboot.min.css" t="Include" />
-                  <e p="bootstrap-reboot.min.css.map" t="Include" />
-                  <e p="bootstrap.css" t="Include" />
-                  <e p="bootstrap.css.map" t="Include" />
-                  <e p="bootstrap.min.css" t="Include" />
-                  <e p="bootstrap.min.css.map" t="Include" />
-                </e>
-                <e p="js" t="Include">
-                  <e p="bootstrap.bundle.js" t="Include" />
-                  <e p="bootstrap.bundle.js.map" t="Include" />
-                  <e p="bootstrap.bundle.min.js" t="Include" />
-                  <e p="bootstrap.bundle.min.js.map" t="Include" />
-                  <e p="bootstrap.js" t="Include" />
-                  <e p="bootstrap.js.map" t="Include" />
-                  <e p="bootstrap.min.js" t="Include" />
-                  <e p="bootstrap.min.js.map" t="Include" />
-                </e>
-              </e>
-              <e p="LICENSE" t="Include" />
-            </e>
-            <e p="jquery" t="Include">
-              <e p="dist" t="Include">
-                <e p="jquery.js" t="Include" />
-                <e p="jquery.min.js" t="Include" />
-                <e p="jquery.min.map" t="Include" />
-              </e>
-              <e p="LICENSE.txt" t="Include" />
-            </e>
-            <e p="jquery-validation" t="Include">
-              <e p="dist" t="Include">
-                <e p="additional-methods.js" t="Include" />
-                <e p="additional-methods.min.js" t="Include" />
-                <e p="jquery.validate.js" t="Include" />
-                <e p="jquery.validate.min.js" t="Include" />
-              </e>
-              <e p="LICENSE.md" t="Include" />
-            </e>
-            <e p="jquery-validation-unobtrusive" t="Include">
-              <e p="jquery.validate.unobtrusive.js" t="Include" />
-              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
-            </e>
-            <e p="signalr" t="Include">
-              <e p="signalr.js" t="Include" />
-              <e p="signalr.js.map" t="Include" />
-              <e p="signalr.min.js" t="Include" />
-              <e p="signalr.min.js.map" t="Include" />
-            </e>
-          </e>
-        </e>
+        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
       <e p="Services" t="Include" />

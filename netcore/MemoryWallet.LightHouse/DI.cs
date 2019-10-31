@@ -17,8 +17,13 @@ namespace MemoryWallet.LightHouse
             var baseFile = Provider.GetService<IBaseFileFactory>();
 
             var confFile = baseFile.ReadRelative("lighthouse.hocon");
-
             var conf = ConfigurationFactory.ParseString(confFile);
+
+//            var v = conf.GetValue("akka.remote.dot-netty.tcp.hostname");
+//            
+//            v.Clear();
+//            var localhost = new HoconLiteral { Value = Dns.GetHostName() };
+//            v.AppendValue(localhost);
 
             return ActorSystem.Create("sbk", conf);
         });
