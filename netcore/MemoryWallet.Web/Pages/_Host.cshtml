@@ -1,0 +1,72 @@
+﻿@page "/"
+@namespace MemoryWallet.Web.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MemoryWallet.Web</title>
+    <base href="~/"/>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link href="css/site.css" rel="stylesheet"/>
+</head>
+<body>
+<app>
+
+
+    @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
+</app>
+
+<script src="_framework/blazor.server.js"></script>
+<script src="js/signalr.min.js"></script>
+
+<script type="text/javascript">
+var connections = {};
+
+window.blazorAssembly = "MemoryWallet.Web"; 
+window.PlayerHubClient = {
+    Start: function (key, hubUrl, method) {
+        // key is the unique key we use to store/retrieve connections
+        console.log("Connection start");
+
+        // create a client
+        console.log("Connection being started for " + hubUrl);
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl(hubUrl)
+            .build();
+
+        console.log("Connection created, adding receive handler");
+
+        // create an inbound message handler for the "ReceiveMessage" event
+        connection.on("ReceiveMessage", (username, message) => {
+            console.log("Connection message received for " + key + " from " + username);
+            // invoke Blazor dotnet method 
+            // we pass the key in so we know which client received the message
+            
+            console.log("invoke: " + "MemoryWallet" + " method:" + method + " message:" + message);
+            
+            DotNet.invokeMethodAsync("MemoryWallet", "ReceiveMessage", username, message);
+            
+        });
+
+        // start the connection
+        var result = connection.start();
+
+        // store connection in our lookup object
+        connections[key] = connection;
+
+        console.log("Connection start: returning a promise?");
+        
+        result.then(r => {
+            console.log(r);
+        });
+        return result;
+    }
+    
+};
+
+</script>
+</body>
+</html>

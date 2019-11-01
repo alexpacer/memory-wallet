@@ -2,167 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c768e2-d443-40ae-8167-27c43b0dd782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/runConfigurations/Web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/App.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Counter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/FetchData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/NavMenu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/NavMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/registerServiceWorker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/Counter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/WeatherForecasts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/configureStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/App.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Data/RegisterModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Data/WeatherForecast.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Data/WeatherForecastService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Hub/PlayerHub.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/JsClients/PlayerHubClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Counter.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/FetchData.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Index.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Shared/MainLayout.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Shared/NavMenu.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/_Imports.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/bootstrap/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/FONT-LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/ICON-LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/open-iconic/font/fonts/open-iconic.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/js/signalr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/js/signalr.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.LightHouse/lighthouse.hocon" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.LightHouse/lighthouse.hocon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Actors/WebHub.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Home.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Hubs/PlayerHub.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/App.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/FetchData.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/NavMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/components/NavMenu.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/registerServiceWorker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/Counter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/WeatherForecasts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/configureStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/src/store/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/ClientApp/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Controllers/WeatherForecastController.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Models/RegisterPlayerModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.cshtml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Pages/_ViewImports.cshtml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Home/index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/index.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/loggingIn.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/login.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Player/register.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Views/_ViewStart.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/WeatherForecast.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/AbortController.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/DefaultHttpClient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/DefaultReconnectPolicy.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/EmptyNodeHttpClient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Errors.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/HandshakeProtocol.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/HttpClient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/HttpConnection.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/HubConnection.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/HubConnectionBuilder.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/IConnection.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/IHttpConnectionOptions.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/IHubProtocol.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/ILogger.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/IRetryPolicy.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/ITransport.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/JsonHubProtocol.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Loggers.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/LongPollingTransport.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/NodeHttpClient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Polyfills.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/ServerSentEventsTransport.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Stream.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Subject.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/TextMessageFormat.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/Utils.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/WebSocketTransport.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/XhrHttpClient.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/browser-index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/dist/esm/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/AbortController.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/DefaultHttpClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/DefaultReconnectPolicy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/EmptyNodeHttpClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Errors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/HandshakeProtocol.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/HttpClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/HttpConnection.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/HubConnection.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/HubConnectionBuilder.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/IConnection.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/IHttpConnectionOptions.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/IHubProtocol.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/ILogger.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/IRetryPolicy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/ITransport.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/JsonHubProtocol.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Loggers.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/LongPollingTransport.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/NodeHttpClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/ServerSentEventsTransport.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Stream.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Subject.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/TextMessageFormat.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/Utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/WebSocketTransport.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/XhrHttpClient.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/browser-index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/node_modules/@microsoft/signalr/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/css/site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/js/site.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/signalr/signalr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/signalr/signalr.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/signalr/signalr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/wwwroot/lib/signalr/signalr.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,31 +90,39 @@
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerActor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/DoYouHaveThisPlayerReq.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/MemoryWallet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E475FC9F-57ED-43C2-A74C-4B5E924CC2D6/c9/a30d9bb5/ServiceCollectionContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IBaseFileFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B64B2F59-F602-48DB-96A0-B09B42851BE3/63/8d21b4d3/ActorSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Repository/PlayerRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/PlayerLoginEvt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Model/ICreatePlayerEvt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/App.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Hub/PlayerHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/_Imports.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E475FC9F-57ED-43C2-A74C-4B5E924CC2D6/c9/a30d9bb5/ServiceCollectionContainerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Data/WeatherForecastService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/FetchData.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/Index.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/Counter.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/Error.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Shared/MainLayout.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Lib/IBaseFileFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/DI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/Data/RegisterModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.LightHouse/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MemoryWallet.Web/JsClients/PlayerHubClient.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MemoryWallet.Service/Program.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Service/DI.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Index.cshtml" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Program.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/SportsBookActor.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.LightHouse/appsettings.json" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/env" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/EnvVar.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/IFileDirHelper.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.cshtml.cs" />
@@ -236,7 +152,6 @@
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerManagerActor.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Actor/PlayerBook.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/appsettings.json" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.Development.json" />
@@ -251,6 +166,14 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Web/AppSettings.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Controllers/AccountController.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Hub/PlayerHub.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor.cshtml.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor.cshtml" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Data/RegisterModel.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/JsClients/PlayerHubClient.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" />
       </list>
     </option>
   </component>
@@ -316,7 +239,7 @@
       <workItem from="1572256804323" duration="148000" />
       <workItem from="1572257148727" duration="1141000" />
       <workItem from="1572338820040" duration="2146000" />
-      <workItem from="1572492356617" duration="10020000" />
+      <workItem from="1572492356617" duration="27499000" />
     </task>
     <servers />
   </component>

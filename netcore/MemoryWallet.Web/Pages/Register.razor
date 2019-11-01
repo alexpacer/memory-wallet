@@ -1,0 +1,81 @@
+@page "/register"
+@using MemoryWallet.Web.Data
+@using MemoryWallet.Web.Hub
+@using Microsoft.AspNetCore.SignalR
+@using Serilog
+
+@inject ILogger _logger
+@inject IJSRuntime _jsRuntime
+@inject IHubContext<PlayerHub> _playerHub
+
+<h1>Register</h1>
+
+<div>
+    <h1 class="display-4">Register player</h1>
+    <EditForm Model="@registerModel" OnValidSubmit="@Submit">
+        <DataAnnotationsValidator />
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <InputText id="name" name="name" @bind-Value="registerModel.Name" class="form-control" placeholder="John Oliver" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <InputText id="email" name="email" @bind-Value="registerModel.Email" class="form-control" placeholder="name@example.com" />
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Register</button>
+    </EditForm>
+    
+    
+</div>
+
+
+@code {
+
+    private RegisterModel registerModel = new RegisterModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        
+        Console.WriteLine("blah");
+        _logger.Information("blah!!");
+
+        await _jsRuntime.InvokeVoidAsync(
+            "PlayerHubClient.Start", "key", "/playerhub");
+        
+        
+        
+//        Console.WriteLine("Connection: " + connection);
+        
+        await base.OnInitializedAsync();
+    }
+
+    async Task Submit()
+    {
+        await _playerHub.Clients.All.SendAsync("ReceiveMessage", "my username", "my message!!!!!");
+        
+        Console.WriteLine("OnValidSubmit");
+    }
+    
+    
+    
+    /// <summary>
+    /// Inbound message handler 
+    /// </summary>
+    /// <param name="key"></param>
+    /// <param name="method"></param>
+    /// <param name="username"></param>
+    /// <param name="message"></param>
+    /// <remarks>
+    /// This method is called from Javascript when amessage is received
+    /// </remarks>
+    [JSInvokable]
+    public static void ReceiveMessage(string username, string message)
+    {
+        Console.WriteLine($"ReceiveMessage: {username}:{message}");
+    }
+    
+    
+}
