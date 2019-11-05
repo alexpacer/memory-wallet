@@ -1,4 +1,6 @@
+using Akka.Actor;
 using MemoryWallet.Lib;
+using MemoryWallet.Web.Actors;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +13,12 @@ namespace MemoryWallet.Web
 {
     public class Startup
     {
+        public delegate ActorSelection PlayerManagerProvider();
+
+        public delegate IActorRef PlayerBookProxyProvider();
+
+        public delegate ActorSelection WebHubProvider();
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,14 +35,16 @@ namespace MemoryWallet.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            
+            services.AddSystemActor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime lifetime)
         {
-//            lifetime.ApplicationStarted.Register(() => SystemActor.ApplicationStarted(app));
-//
-//            lifetime.ApplicationStopping.Register(() => SystemActor.ApplicationStopping(app));
+            lifetime.ApplicationStarted.Register(() => SystemActor.ApplicationStarted(app));
+
+            lifetime.ApplicationStopping.Register(() => SystemActor.ApplicationStopping(app));
             
             if (env.IsDevelopment())
             {

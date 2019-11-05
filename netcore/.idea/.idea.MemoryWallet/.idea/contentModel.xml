@@ -70,10 +70,14 @@
       <e p="MemoryWallet.sln" t="IncludeFlat" />
       <e p="MemoryWallet.Web" t="IncludeRecursive">
         <e p="_Imports.razor" t="Include" />
+        <e p="Actors" t="Include">
+          <e p="SystemActor.cs" t="Include" />
+        </e>
         <e p="App.razor" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Clients.cs" t="Include" />
         <e p="Data" t="Include">
           <e p="RegisterModel.cs" t="Include" />
           <e p="WeatherForecast.cs" t="Include" />
@@ -81,10 +85,9 @@
         </e>
         <e p="Hub" t="Include">
           <e p="PlayerHub.cs" t="Include" />
+          <e p="WebHub.cs" t="Include" />
         </e>
-        <e p="JsClients" t="Include">
-          <e p="PlayerHubClient.cs" t="Include" />
-        </e>
+        <e p="JsClients" t="Include" />
         <e p="MemoryWallet.Web.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -110,6 +113,7 @@
           <e p="NavMenu.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="web.hocon" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="bootstrap" t="Include">

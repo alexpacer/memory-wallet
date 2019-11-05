@@ -1,4 +1,6 @@
 @page "/register"
+@using Akka.Actor
+@using MemoryWallet.Lib.Model
 @using MemoryWallet.Web.Data
 @using MemoryWallet.Web.Hub
 @using Microsoft.AspNetCore.SignalR
@@ -7,6 +9,7 @@
 @inject ILogger _logger
 @inject IJSRuntime _jsRuntime
 @inject IHubContext<PlayerHub> _playerHub
+@inject Startup.PlayerManagerProvider provider
 
 <h1>Register</h1>
 
@@ -33,49 +36,33 @@
 
 
 @code {
-
     private RegisterModel registerModel = new RegisterModel();
-
-    protected override async Task OnInitializedAsync()
+    private ActorSelection _playerManagers;
+    
+    protected override void OnInitialized()
     {
+        _playerManagers = provider();
         
         Console.WriteLine("blah");
-        _logger.Information("blah!!");
-
-        await _jsRuntime.InvokeVoidAsync(
-            "PlayerHubClient.Start", "key", "/playerhub");
+        _jsRuntime.InvokeAsync<object>(
+            "PlayerHubClient.Start", "hub", "/playerhub");
         
-        
-        
-//        Console.WriteLine("Connection: " + connection);
-        
-        await base.OnInitializedAsync();
+        base.OnInitialized();
     }
 
     async Task Submit()
     {
-        await _playerHub.Clients.All.SendAsync("ReceiveMessage", "my username", "my message!!!!!");
+        var newPlayer = new CreatePlayerEvt(registerModel.Name, registerModel.Email);
+        
+        _playerManagers.Tell(newPlayer);
+        
+//        await _playerHub.Clients.All.SendAsync("PlayerChannel", 
+//            registerModel.Name, registerModel.Email);
         
         Console.WriteLine("OnValidSubmit");
     }
     
     
-    
-    /// <summary>
-    /// Inbound message handler 
-    /// </summary>
-    /// <param name="key"></param>
-    /// <param name="method"></param>
-    /// <param name="username"></param>
-    /// <param name="message"></param>
-    /// <remarks>
-    /// This method is called from Javascript when amessage is received
-    /// </remarks>
-    [JSInvokable]
-    public static void ReceiveMessage(string username, string message)
-    {
-        Console.WriteLine($"ReceiveMessage: {username}:{message}");
-    }
-    
+
     
 }
