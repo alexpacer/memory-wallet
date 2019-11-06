@@ -41,6 +41,7 @@ window.PlayerHubClient = {
 
         // create an inbound message handler for the "ReceiveMessage" event
         connection.on("PlayerChannel", function(username, message) {
+            
             console.log("Connection message received for " + key + " from " + username);
             // invoke Blazor dotnet method 
             // we pass the key in so we know which client received the message
@@ -58,6 +59,9 @@ window.PlayerHubClient = {
         console.log("Connection start: returning a promise?");
         
         return result;
+    },
+    GetConnection: function(key){
+        return connections[key];
     }
     
 };

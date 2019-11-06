@@ -95,7 +95,7 @@ akka {
   remote {
     dot-netty.tcp {
       hostname = localhost
-      port = 0
+      port = 6001
     }
   }
 

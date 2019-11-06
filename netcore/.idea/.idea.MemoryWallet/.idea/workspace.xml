@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81c768e2-d443-40ae-8167-27c43b0dd782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Clients.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/Hub/WebHub.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MemoryWallet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/JsClients/PlayerHubClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/MemoryWallet.Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Hub/WebHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Hub/WebHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +83,6 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Repository/PlayerRepository.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Model/PlayerAlreadyRegisteredEvt.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/Program.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Lib/Extensions.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/DI.cs" />
@@ -111,14 +105,15 @@
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Data/RegisterModel.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/JsClients/PlayerHubClient.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Clients.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/System.cs" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Actors/SystemActor.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/appsettings.json" />
-        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Startup.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.ProcessManager/process-manager.hocon" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/web.hocon" />
         <option value="$PROJECT_DIR$/MemoryWallet.Web/Hub/WebHub.cs" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/Register.razor" />
+        <option value="$PROJECT_DIR$/MemoryWallet.Web/Pages/_Host.cshtml" />
       </list>
     </option>
   </component>
@@ -186,7 +181,7 @@
       <workItem from="1572338820040" duration="2146000" />
       <workItem from="1572492356617" duration="27499000" />
       <workItem from="1572931554490" duration="6954000" />
-      <workItem from="1572942086808" duration="2758000" />
+      <workItem from="1572942086808" duration="12674000" />
     </task>
     <servers />
   </component>

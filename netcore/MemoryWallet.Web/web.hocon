@@ -33,18 +33,18 @@ akka {
     }
 
     debug {
-      //      receive = on
-      //      autoreceive = on
-      //      lifecycle = on
-      //      event-stream = on
-      //      unhandled = on
+      receive = on
+      autoreceive = on
+      lifecycle = on
+      event-stream = on
+      unhandled = on
     }
   }
 
   remote {
     dot-netty.tcp {
       hostname = localhost
-      port = 0
+      port = 6002
     }
   }
 

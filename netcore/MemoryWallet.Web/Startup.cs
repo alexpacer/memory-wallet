@@ -51,7 +51,7 @@ namespace MemoryWallet.Web
                 app.UseDeveloperExceptionPage();
             }
             else
-            {
+            { 
                 app.UseExceptionHandler("/Error");
             }
 

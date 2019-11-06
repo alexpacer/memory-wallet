@@ -16,9 +16,7 @@ namespace MemoryWallet.Web.Hub
             
             Receive<PlayerAlreadyRegisteredEvt>(message =>
             {
-//                await _playerHub.Clients.All.SendAsync("PlayerChannel", 
-////            registerModel.Name, registerModel.Email);
-                
+               
                 _playerHub.Clients.All.SendAsync(
                     "PlayerChannel", "player-already-existed", message.Email);
 
